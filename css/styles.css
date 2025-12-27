@@ -48,9 +48,7 @@ h3{ font-size: 1.1rem; }
   color: rgba(255,255,255,.78);
   margin-bottom: 10px;
 }
-.fineprint {
- margin-top: 10px;
-}
+
 .skip-link{
   position: absolute;
   left: -999px;
@@ -375,7 +373,7 @@ input:focus, select:focus, textarea:focus{
 .footer-links a:hover{ color: rgba(255,255,255,.98); }
 .footer-meta{ text-align: right; }
 
-.muted{
+.muted, .d-email{
   margin-top: 18px;
 }
 
