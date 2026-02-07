@@ -1,302 +1,211 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YEVRO POLYCARBONATE | Wholesale European Sheets</title>
-    <meta name="description" content="Factory-Direct European Polycarbonate for Canadian Construction. Wholesale Bayer Makrolon® sheets.">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    
+    <title>Yevro Polycarbonate | Wholesale European Sheets</title>
+    <meta name="description" content="Factory-Direct European Polycarbonate for the Canadian Market. Premium Bayer Makrolon® sheets for commercial fabricators and greenhouses.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
 
-<body class="bg-slate-50 text-slate-800 antialiased" x-data="siteLogic">
-
-    <nav class="fixed w-full z-40 glass-nav border-b border-slate-200 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-            
-            <a href="#" class="flex items-center">
-                <img src="assets/Yevro Polycarbonate Logo.png" alt="Yevro Polycarbonate Supply" class="h-10 md:h-12 w-auto object-contain">
-            </a>
-
-            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide text-slate-600 items-center">
-                <a href="#advantage" class="hover:text-blue-700 transition">The Advantage</a>
-                <a href="#products" class="hover:text-blue-700 transition">Products</a>
-                <a href="#logistics" class="hover:text-blue-700 transition">Logistics</a>
-                <a href="#faq" class="hover:text-blue-700 transition">FAQ</a>
-                <button @click="techModal = true" class="hover:text-blue-700 transition text-blue-800 border-b-2 border-transparent hover:border-blue-700">Technical Data</button>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">YEVRO<span>POLY</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-
-            <div class="hidden md:block">
-                <a href="#quote" class="bg-blue-800 text-white px-6 py-2.5 rounded-lg font-bold hover:bg-blue-900 transition shadow-lg shadow-blue-800/20">
-                    Request Quote
-                </a>
-            </div>
-
-            <button @click="toggleMobileMenu()" class="md:hidden text-slate-800">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-
-        <div x-show="mobileMenu" x-cloak class="md:hidden bg-white border-t border-gray-100 p-6 space-y-4 shadow-xl">
-            <a href="#advantage" @click="mobileMenu = false" class="block font-semibold text-slate-700">The Advantage</a>
-            <a href="#products" @click="mobileMenu = false" class="block font-semibold text-slate-700">Products</a>
-            <a href="#faq" @click="mobileMenu = false" class="block font-semibold text-slate-700">FAQ</a>
-            <button @click="techModal = true; mobileMenu = false" class="block font-semibold text-blue-700">Technical Data Center</button>
-            <a href="#quote" @click="mobileMenu = false" class="block w-full text-center bg-blue-800 text-white py-3 rounded-lg font-bold">Request Quote</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">Advantage</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#logistics" class="nav-link">Logistics</a></li>
+                <li><a href="#contact" class="nav-link btn-quote">Request Quote</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="video-docker">
-            <video autoplay muted loop playsinline poster="assets/IMG-20251218-WA0026.jpg">
-                <source src="assets/video/VID-20251218-WA0070.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-slate-900/70"></div>
-        </div>
-
-        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto mt-10">
-            <div class="inline-block bg-blue-600/90 backdrop-blur px-4 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-widest border border-blue-400 mb-6">
-                Factory-Direct to Canada
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight text-white mb-6 drop-shadow-lg">
-                Wholesale European Polycarbonate. <br />
-                <span class="text-blue-300">Canadian Accountability.</span>
-            </h1>
-            
-            <p class="text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-md">
-                We supply Greenhouse Construction Firms and Commercial Fabricators with premium Bayer Makrolon® sheets. Bypass the distributor markup.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#quote" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl shadow-xl hover:bg-gray-100 transition">
-                    Create Quote Request
-                </a>
-                <button @click="techModal = true" class="px-8 py-4 border border-white/30 bg-white/10 backdrop-blur rounded-xl font-bold text-white hover:bg-white/20 transition">
-                    View Technical Data
-                </button>
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Factory-Direct European Polycarbonate</h1>
+            <p>We supply Greenhouse Construction Firms and Commercial Fabricators with premium Bayer Makrolon® sheets. Bypass the distributor markup.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">View Products</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
             </div>
         </div>
     </section>
 
-    <section id="advantage" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4">The Commercial Advantage</h2>
-                <div class="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Commercial Advantage</h2>
+                <p>Why Canadian fabricators choose Yevro.</p>
             </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Canadian Partner</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Local legal accountability with ISO-certified European production capacity.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Canadian Accountability</h3>
+                    <p>Local legal accountability with ISO-certified European production capacity. We are your local partner.</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Wholesale Pricing</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Stop paying retail margins. Save up to 30% on bid margins.</p>
+                <div class="feature-card">
+                    <i class="fas fa-tags"></i>
+                    <h3>Wholesale Pricing</h3>
+                    <p>Stop paying retail margins. Save up to 30% on bid margins by ordering Full Container Loads (FCL).</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1 flex flex-col">
-                    <div class="w-12 h-12 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Certified Quality</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-4">100% Virgin Makrolon®. UV co-extrusion prevents yellowing.</p>
-                    <div class="mt-auto h-24 w-full rounded-lg overflow-hidden border border-slate-200">
-                        <img src="assets/IMG-20251218-WA0055.jpg" alt="UV Protection Printing" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300 hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-purple-100 text-purple-700 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">Seamless Logistics</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Every shipment includes ISPM-15 certified pallets and Certificates of Origin.</p>
+                <div class="feature-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Certified Quality</h3>
+                    <p>100% Virgin Makrolon® resin. UV co-extrusion prevents yellowing. 10-Year Written Warranty.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="products" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 border-l-4 border-blue-500 pl-6">Product Catalog</h2>
-            <div class="space-y-24">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <h3 class="text-3xl font-bold mb-2">Solid Polycarbonate Sheets</h3>
-                        <p class="text-blue-300 font-medium mb-6">"Impact-Resistant Glazing & Security Shields"</p>
-                        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-8 shadow-lg">
-                            <ul class="space-y-3 text-sm text-slate-300">
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Material:</strong> 100% Virgin Bayer Makrolon®</li>
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Dimensions:</strong> 2050mm x 3050mm</li>
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Thickness:</strong> 2mm - 12mm</li>
-                            </ul>
-                        </div>
-                        <button @click="techModal = true" class="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">View Solid Specs & TDS →</button>
+    <section id="products" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Products</h2>
+                <p>Premium grade sheets manufactured to European Standards.</p>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1622370830491-d856d8173495?auto=format&fit=crop&w=800&q=80" alt="Solid Polycarbonate">
                     </div>
-                    <div class="order-1 lg:order-2 h-[500px] bg-slate-800 rounded-xl overflow-hidden relative border border-slate-700">
-                        <img src="assets/images/IMG-20251218-WA0014.jpg" class="w-full h-full object-cover hover:scale-105 transition duration-700" alt="Solid Polycarbonate Pallets">
-                        <div class="absolute bottom-4 right-4 bg-black/60 px-3 py-1 rounded text-xs">Ready for Export</div>
+                    <div class="product-info">
+                        <h3>Solid Polycarbonate</h3>
+                        <p class="subtitle">Impact-Resistant Glazing & Security</p>
+                        <ul class="specs-list">
+                            <li><i class="fas fa-check"></i> <strong>Material:</strong> 100% Virgin Bayer Makrolon®</li>
+                            <li><i class="fas fa-ruler-combined"></i> <strong>Size:</strong> 2050mm x 3050mm</li>
+                            <li><i class="fas fa-layer-group"></i> <strong>Thickness:</strong> 2mm - 12mm</li>
+                        </ul>
+                        <p class="desc">Ideal for security shields, heavy-duty glazing, and noise barriers.</p>
+                        <a href="#contact" class="btn btn-sm">Get Pricing</a>
                     </div>
                 </div>
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="h-[400px] bg-slate-800 rounded-xl overflow-hidden relative border border-slate-700">
-                        <img src="assets/photo_2026-02-01 16.30.29.jpeg" class="w-full h-full object-cover hover:scale-105 transition duration-700" alt="Multiwall Production Line">
-                        <div class="absolute bottom-4 left-4 bg-black/60 px-3 py-1 rounded text-xs">High Optical Clarity</div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520108375997-c8646b14242d?auto=format&fit=crop&w=800&q=80" alt="Multiwall Polycarbonate">
                     </div>
-                    <div>
-                        <h3 class="text-3xl font-bold mb-2">Multiwall (Cellular) Polycarbonate</h3>
-                        <p class="text-blue-300 font-medium mb-6">"Structural Panels for Greenhouses & Roofing"</p>
-                        <div class="bg-slate-800 p-6 rounded-xl border border-slate-700 mb-8 shadow-lg">
-                            <ul class="space-y-3 text-sm text-slate-300">
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Structure:</strong> Twin-Wall (H) and Structural (X)</li>
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Sheet Size:</strong> 2100mm x 6000mm</li>
-                                <li class="flex items-start"><span class="text-blue-400 mr-2">✓</span> <strong>Application:</strong> Commercial Greenhouses & Skylights</li>
-                            </ul>
-                        </div>
-                        <button @click="techModal = true" class="text-white border-b border-blue-500 pb-1 hover:text-blue-400 transition">View Multiwall Specs & TDS →</button>
+                    <div class="product-info">
+                        <h3>Multiwall Polycarbonate</h3>
+                        <p class="subtitle">Structural Panels for Greenhouses</p>
+                        <ul class="specs-list">
+                            <li><i class="fas fa-check"></i> <strong>Structure:</strong> Twin-Wall & Structural (X)</li>
+                            <li><i class="fas fa-ruler-combined"></i> <strong>Size:</strong> 2100mm x 6000mm</li>
+                            <li><i class="fas fa-sun"></i> <strong>Use:</strong> Greenhouses & Skylights</li>
+                        </ul>
+                        <p class="desc">High optical clarity with excellent thermal insulation properties.</p>
+                        <a href="#contact" class="btn btn-sm">Get Pricing</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="logistics" class="py-24 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-slate-900">Logistics & Documentation</h2>
-                <p class="text-slate-500 mt-2">Built for Predictability.</p>
+    <section id="logistics" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seamless Logistics</h2>
+                <p>Built for predictability. We handle the complexity.</p>
             </div>
-            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
-                <div class="lg:col-span-2 space-y-6">
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded uppercase">Option A</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Delivered to Canada (DAP)</h3>
-                        <p class="text-sm text-slate-600">We coordinate delivery from our European factory to your designated location.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
-                        <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded uppercase">Option B</span>
-                        <h3 class="text-xl font-bold mt-4 mb-2">Customer-Managed (FCA)</h3>
-                        <p class="text-sm text-slate-600">For customers with established logistics. We offer FCA readiness at our factory.</p>
-                    </div>
-                     <div class="bg-slate-800 text-white p-6 rounded-xl flex items-center justify-between">
+            <div class="logistics-container">
+                <div class="logistics-box">
+                    <h4>Option A: Delivered (DAP)</h4>
+                    <p>We coordinate delivery from our European factory directly to your facility in Canada.</p>
+                </div>
+                <div class="logistics-divider">OR</div>
+                <div class="logistics-box">
+                    <h4>Option B: Customer (FCA)</h4>
+                    <p>For customers with established logistics. We offer FCA readiness at our factory.</p>
+                </div>
+            </div>
+            <div class="logistics-note">
+                <i class="fas fa-info-circle"></i> Every shipment includes ISPM-15 certified pallets and Certificates of Origin.
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Start Your Order</h2>
+                    <p>We supply Full Container Loads (FCL). Mix and match thicknesses and types.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
                         <div>
-                            <h4 class="font-bold">Submittal Ready</h4>
-                            <p class="text-xs text-slate-400 mt-1">ISPM-15 Stamped Pallets • Cert of Origin</p>
-                        </div>
-                        <div class="text-2xl">🚛</div>
-                    </div>
-                </div>
-                <div class="lg:col-span-1 h-full min-h-[400px]">
-                    <div class="h-full w-full rounded-2xl overflow-hidden relative shadow-lg">
-                        <img src="assets/images/IMG-20251218-WA0017.jpg" alt="Truck Loading" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                            <p class="text-white font-bold">Real-time Shipping</p>
-                            <p class="text-white/70 text-sm">Direct European Loading</p>
+                            <strong>Email Us</strong>
+                            <a href="mailto:sales@yevropolycarbonate.ca">sales@yevropolycarbonate.ca</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Availability</strong>
+                            <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
 
-    <section id="faq" class="py-24 bg-white border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="mb-12">
-                <span class="text-blue-600 font-bold uppercase text-xs tracking-widest">Common Questions</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2">Frequently Asked Questions</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
-                <div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-3">1. Where are your polycarbonate sheets manufactured?</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">All Yevro sheets are manufactured in our ISO-certified European facility using exclusively 100% Virgin Bayer Makrolon® resin.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-3">2. What is your minimum order quantity (MOQ)?</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">We supply Full Container Loads (FCL) only. However, you can mix and match different thicknesses, colors, and types within a container.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-3">3. Can you extrude custom lengths?</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Yes. We specialize in "Run-to-Size" production for large commercial projects to minimize waste.</p>
-                </div>
-                <div>
-                    <h3 class="font-bold text-slate-900 text-lg mb-3">4. Do your sheets come with a warranty?</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Absolutely. We provide a 10-Year Written Warranty on all Solid and Multiwall sheets covering yellowing and breakage.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="quote" class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16">
-                <div class="space-y-8">
-                    <h2 class="text-4xl font-bold text-slate-900">Connecting With Us Is Simple.</h2>
-                    <p class="text-slate-600">Pick up the phone or email us. We are available for prompt replies.</p>
-                    <div class="flex items-start">
-                        <p class="font-bold text-slate-900 mr-4">Email:</p>
-                        <a href="mailto:sales@yevropolycarbonate.ca" class="text-blue-600 hover:underline">sales@yevropolycarbonate.ca</a>
+                    <div class="warranty-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>10-Year Warranty Included</span>
                     </div>
                 </div>
-                <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-8">
-                    <h3 class="text-2xl font-bold mb-6 text-slate-800">Build Your Project Quote</h3>
-                    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-4">
-                        <div class="grid grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="Full Name" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-                            <input type="text" name="company" placeholder="Company" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
+
+                <div class="contact-form-box">
+                    <form id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        <input type="email" name="email" placeholder="Email" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-                        <select name="product" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3">
-                            <option>Multiwall (Cellular) Polycarbonate</option>
-                            <option>Solid Polycarbonate Sheets</option>
-                        </select>
-                        <textarea name="message" rows="3" placeholder="Message / Cut List" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3"></textarea>
-                        <button type="submit" class="w-full bg-blue-800 text-white font-bold py-4 rounded-lg hover:bg-blue-900 transition">Submit Quote Request</button>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Interested Product</label>
+                            <select id="product" name="product">
+                                <option value="Solid Polycarbonate">Solid Polycarbonate</option>
+                                <option value="Multiwall Polycarbonate">Multiwall Polycarbonate</option>
+                                <option value="Both/Other">Both / Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details / Est. Volume</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center text-sm border-t border-slate-800">
-        <p>&copy; 2026 Yevro Polycarbonate. All Rights Reserved.</p>
-    </footer>
-
-    <div x-show="techModal" x-cloak class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-        <div class="fixed inset-0 bg-slate-900/90 backdrop-blur-sm transition-opacity" @click="techModal = false"></div>
-        <div class="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
-            <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl border border-slate-200">
-                <div class="bg-slate-50 border-b border-slate-100 relative">
-                    <div class="h-40 w-full overflow-hidden relative">
-                         <img src="assets/images/photo_2026-02-01 16.30.22.jpeg" alt="Multiwall Cross Section" class="w-full h-full object-cover">
-                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end px-6 py-4">
-                             <div class="text-white">
-                                 <h3 class="text-xl font-bold">Technical Resource Center</h3>
-                             </div>
-                         </div>
-                    </div>
-                    <button @click="techModal = false" class="absolute top-4 right-4 bg-white/20 backdrop-blur p-2 rounded-full text-white hover:bg-white/40 transition">✕</button>
-                </div>
-                <div class="px-6 py-8">
-                     <p class="text-center text-slate-500 mb-6">Download TDS documents here.</p>
-                     <div class="text-right">
-                        <button @click="techModal = false; location.href='#quote'" class="bg-blue-800 text-white px-5 py-2 rounded font-bold">Get Quote</button>
-                     </div>
-                </div>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">YEVRO<span>POLY</span></div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#logistics">Logistics</a>
+                <a href="mailto:sales@yevropolycarbonate.ca">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Yevro Polycarbonate. All Rights Reserved.
             </div>
         </div>
-    </div>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
