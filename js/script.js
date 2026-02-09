@@ -1,18 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav-menu');
-    const links = document.querySelectorAll('.nav-menu a');
+// Basic script file for future enhancements
+// Intentionally minimal for performance and clarity
 
-    if(toggle) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-    }
-
-    // Close menu when clicking a link
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-        });
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  // Placeholder for future features (mobile nav, analytics hooks, etc.)
+  console.log("Yevro Polycarbonate site loaded");
 });
