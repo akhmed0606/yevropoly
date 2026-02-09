@@ -1,7 +1,24 @@
-// Basic script file for future enhancements
-// Intentionally minimal for performance and clarity
+document.addEventListener("DOMContentLoaded", () => {
+  // Footer year
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Placeholder for future features (mobile nav, analytics hooks, etc.)
-  console.log("Yevro Polycarbonate site loaded");
+  // Mobile nav toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".site-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Close menu when clicking a link (mobile)
+    nav.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 });
