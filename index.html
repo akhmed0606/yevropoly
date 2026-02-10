@@ -4,252 +4,330 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yevro Polycarbonate | B2B Polycarbonate Supply to Canada</title>
-  <meta name="description" content="B2B supply of multiwall and solid polycarbonate sheets to Canada. Specs, logistics terms (FCA/DAP/DDP), technical documentation, and quote request." />
+  <meta name="description" content="B2B supply of multiwall and solid polycarbonate sheets to Canada. Specs, UV protection, structures, colors, logistics terms (FCA/DAP/DDP), technical documents, and quote request." />
 
-  <!-- Preload hero image (change to your best hero file if needed) -->
   <link rel="preload" as="image" href="assets/images/hero4.jpeg" fetchpriority="high" />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<header class="header" id="top">
-  <div class="container header__inner">
-    <a class="brand" href="#top" aria-label="Yevro Polycarbonate Home">
-      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="brand__logo" />
+<header class="topbar" id="top">
+  <div class="container topbar__inner">
+    <a class="brand" href="#top" aria-label="Yevro Polycarbonate">
+      <img src="assets/logo.png" class="brand__logo" alt="Yevro Polycarbonate logo" />
       <span class="brand__name">Yevro Polycarbonate</span>
     </a>
 
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+    <button class="navbtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
 
     <nav class="nav" id="nav" aria-label="Primary navigation">
-      <a class="nav__link is-active" href="#products">Products</a>
-      <a class="nav__link" href="#specs">Specs</a>
-      <a class="nav__link" href="#technical">Technical Docs</a>
-      <a class="nav__link" href="#logistics">Logistics</a>
-      <a class="nav__link" href="#applications">Applications</a>
-      <a class="nav__link" href="#factory">Factory</a>
-      <a class="nav__link" href="#faq">FAQ</a>
-      <a class="nav__cta" href="#quote">Request Quote</a>
+      <a href="#products" class="nav__link">Products</a>
+      <a href="#multiwall" class="nav__link">Multiwall</a>
+      <a href="#solid" class="nav__link">Solid</a>
+      <a href="#technical" class="nav__link">Technical Docs</a>
+      <a href="#logistics" class="nav__link">Logistics</a>
+      <a href="#applications" class="nav__link">Applications</a>
+      <a href="#factory" class="nav__link">Factory</a>
+      <a href="#quote" class="nav__cta">Request Quote</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (simple like your example: 1 image, short copy, strong CTA) -->
 <section class="hero" style="background-image:url('assets/images/hero4.jpeg');">
   <div class="hero__overlay">
     <div class="container hero__inner">
       <p class="kicker">Wholesale supply • Canada-focused</p>
-      <h1>Polycarbonate Sheets for Distributors, Fabricators, and Commercial Buyers</h1>
+      <h1>Polycarbonate Sheets for Distributors, Fabricators & Commercial Buyers</h1>
       <p class="hero__lead">
         Multiwall and solid polycarbonate supplied into Canada with consistent specifications, co-extruded UV protection,
-        and container-level availability.
+        and container-level supply.
       </p>
 
       <div class="hero__actions">
-        <a class="btn btn--primary" href="#quote">Request Quote</a>
+        <a class="btn btn--primary" href="#quote">Get a Quote</a>
         <a class="btn btn--ghost" href="#technical">Download TDS</a>
       </div>
 
-      <div class="hero__bar" aria-label="Quick overview">
-        <div class="bar-item"><strong>Resin</strong><span>Made using leading global resin, incl. Bayer Covestro (Makrolon®)</span></div>
-        <div class="bar-item"><strong>UV</strong><span>Solid: both sides • Multiwall: one side (standard)</span></div>
-        <div class="bar-item"><strong>Structures</strong><span>Multiwall H-structure and X-structure</span></div>
-        <div class="bar-item"><strong>Colors</strong><span>Clear + multiple tints (by thickness/volume)</span></div>
+      <div class="quick">
+        <div class="quick__item"><strong>Resin</strong><span>Made using leading global resin, including Bayer Covestro (Makrolon®)</span></div>
+        <div class="quick__item"><strong>UV</strong><span>Solid: both sides • Multiwall: one side (standard)</span></div>
+        <div class="quick__item"><strong>Multiwall</strong><span>H-structure & X-structure available</span></div>
+        <div class="quick__item"><strong>Colors</strong><span>Clear + multiple tinted options (by thickness/volume)</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
+<!-- PRODUCTS OVERVIEW -->
 <section class="section" id="products">
   <div class="container">
-    <div class="section__head">
+    <div class="head">
       <h2>Products</h2>
-      <p>Two core products. Clear specs. Simple wholesale buying process.</p>
+      <p>Simple selection. Clear documentation. Built for B2B wholesale purchasing.</p>
     </div>
 
-    <div class="product-grid">
-      <article class="product">
-        <img class="product__img" src="assets/images/multiwall.jpg" alt="Multiwall polycarbonate sheets" loading="lazy" />
-        <div class="product__body">
+    <div class="two">
+      <article class="panel">
+        <img src="assets/images/multiwall.jpg" alt="Multiwall polycarbonate sheet" loading="lazy" />
+        <div class="panel__body">
           <h3>Multiwall Polycarbonate</h3>
-          <ul class="list">
-            <li>H-structure and X-structure available</li>
-            <li>Co-extruded UV protection on one side (standard)</li>
-            <li>Multiple thicknesses and color options</li>
+          <ul class="bullets">
+            <li>H-structure and X-structure options</li>
+            <li>Co-extruded UV on one side (standard)</li>
+            <li>Multiple thicknesses and colors available</li>
           </ul>
-          <div class="mini">
-            <span class="tag">Best for: greenhouses, canopies, roofing, wall systems</span>
-          </div>
+          <a class="btn btn--light" href="#multiwall">View Multiwall Details</a>
         </div>
       </article>
 
-      <article class="product">
-        <img class="product__img" src="assets/images/solid.jpg" alt="Solid polycarbonate sheets" loading="lazy" />
-        <div class="product__body">
+      <article class="panel">
+        <img src="assets/images/solid.jpg" alt="Solid polycarbonate sheet" loading="lazy" />
+        <div class="panel__body">
           <h3>Solid Polycarbonate</h3>
-          <ul class="list">
-            <li>Co-extruded UV protection on both sides</li>
+          <ul class="bullets">
+            <li>Co-extruded UV on both sides</li>
             <li>High impact resistance for commercial use</li>
             <li>Clear and tinted options (by thickness/volume)</li>
           </ul>
-          <div class="mini">
-            <span class="tag">Best for: glazing, guarding, industrial protection, architectural panels</span>
-          </div>
+          <a class="btn btn--light" href="#solid">View Solid Details</a>
         </div>
       </article>
     </div>
 
-    <div class="callout">
+    <div class="bar">
       <div>
-        <h3>Who we supply</h3>
-        <p>We are set up for B2B volume buyers — distributors, mid-sized fabricators, greenhouse operators, and commercial projects.</p>
+        <strong>Who we supply:</strong>
+        Distributors • Mid-sized Fabricators • Greenhouses • Commercial / Industrial projects
       </div>
-      <a class="btn btn--primary" href="#quote">Request Quote</a>
+      <a class="btn btn--primary" href="#quote">Request Pricing</a>
     </div>
   </div>
 </section>
 
-<!-- SPECS SNAPSHOT -->
-<section class="section section--soft" id="specs">
+<!-- MULTIWALL (like the example: short feature list + download button + spec cards) -->
+<section class="section section--soft" id="multiwall">
   <div class="container">
-    <div class="section__head">
-      <h2>Specs Snapshot</h2>
-      <p>What buyers ask first — without forcing you to read a wall of text. Full details live in the TDS.</p>
-    </div>
-
-    <div class="spec-grid">
-      <div class="spec">
-        <h3>Resin / Material</h3>
-        <p>Manufactured using leading global resin, including Bayer Covestro (Makrolon®).</p>
-      </div>
-
-      <div class="spec">
-        <h3>UV Protection</h3>
+    <div class="split">
+      <div class="split__copy">
+        <h2>Multiwall Polycarbonate</h2>
         <p>
-          Co-extruded UV layer. <strong>Solid:</strong> UV on both sides. <strong>Multiwall:</strong> UV on one side (standard).
-          Enhanced UV available on request for volume orders.
+          Lightweight, insulating sheet for greenhouse, canopy, roofing, and architectural applications.
+          Designed for buyers who need repeatable structure and UV performance.
         </p>
+
+        <ul class="checks">
+          <li>H-structure & X-structure configurations</li>
+          <li>Standard UV: co-extruded UV on one side (typ. 40 micron)</li>
+          <li>Enhanced UV available on request (volume dependent)</li>
+          <li>Colors: clear + multiple tints (availability by thickness/volume)</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn btn--primary" href="#technical">Download Multiwall TDS</a>
+          <a class="btn btn--outline" href="#quote">Ask for Lead Time</a>
+        </div>
       </div>
 
-      <div class="spec">
-        <h3>Multiwall Structures</h3>
-        <p>We supply multiwall in <strong>H-structure</strong> and <strong>X-structure</strong> configurations (by thickness and order volume).</p>
-      </div>
-
-      <div class="spec">
-        <h3>Colors Available</h3>
-        <p>Clear and multiple tinted options. Color availability depends on thickness and volume. Ask for your target color in the quote request.</p>
+      <div class="split__media">
+        <img src="assets/images/usecase-4.jpg" alt="Multiwall application example" loading="lazy" />
       </div>
     </div>
 
-    <div class="note">
-      <strong>Note:</strong> UV layer thickness ranges and thickness-specific values should be shown in the Technical Data Sheets.
-      We keep that detail in documentation so the website stays readable.
+    <h3 class="subhead">Available Structures & Options</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>H-Structure</h4>
+        <p class="muted">Standard multiwall structure used for many greenhouse and roofing builds.</p>
+        <div class="kv">
+          <div><strong>UV</strong><span>One side (standard)</span></div>
+          <div><strong>Colors</strong><span>Clear + tints</span></div>
+          <div><strong>Ordering</strong><span>Wholesale volumes</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>X-Structure</h4>
+        <p class="muted">Enhanced structure option for projects requiring different stiffness/insulation behavior.</p>
+        <div class="kv">
+          <div><strong>UV</strong><span>One side (standard)</span></div>
+          <div><strong>Colors</strong><span>Clear + tints</span></div>
+          <div><strong>Ordering</strong><span>Wholesale volumes</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>UV Options</h4>
+        <p class="muted">Standard UV is defined in the TDS. Higher UV levels can be added by request.</p>
+        <div class="kv">
+          <div><strong>Standard</strong><span>40 micron (typ.)</span></div>
+          <div><strong>Custom</strong><span>Available on request</span></div>
+          <div><strong>Confirmed</strong><span>In quote + docs</span></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TECHNICAL DOCS -->
-<section class="section" id="technical">
+<!-- SOLID -->
+<section class="section" id="solid">
   <div class="container">
-    <div class="section__head">
+    <div class="split split--reverse">
+      <div class="split__copy">
+        <h2>Solid Polycarbonate</h2>
+        <p>
+          Solid sheet for commercial glazing, guarding, architectural panels, and industrial protection
+          where impact resistance and clarity matter.
+        </p>
+
+        <ul class="checks">
+          <li>Co-extruded UV on both sides</li>
+          <li>UV layer thickness varies by thickness range (defined in TDS)</li>
+          <li>Clear + multiple tinted options (availability by thickness/volume)</li>
+          <li>Enhanced UV available on request</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn btn--primary" href="#technical">Download Solid TDS</a>
+          <a class="btn btn--outline" href="#quote">Request Pricing</a>
+        </div>
+      </div>
+
+      <div class="split__media">
+        <img src="assets/images/usecase-6.jpg" alt="Solid polycarbonate application example" loading="lazy" />
+      </div>
+    </div>
+
+    <h3 class="subhead">UV Overview (Solid)</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Standard UV (Both Sides)</h4>
+        <p class="muted">
+          Solid sheets are protected on both sides via co-extrusion.
+          Thickness-specific UV layer details are provided in the Solid TDS.
+        </p>
+        <div class="kv">
+          <div><strong>2–5 mm</strong><span>50 micron (typ.)</span></div>
+          <div><strong>6–12 mm</strong><span>70 micron (typ.)</span></div>
+          <div><strong>Custom</strong><span>Available by request</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Color Options</h4>
+        <p class="muted">Clear and tinted options available. Confirm your target color in the quote request.</p>
+        <div class="kv">
+          <div><strong>Clear</strong><span>Common</span></div>
+          <div><strong>Tinted</strong><span>By volume</span></div>
+          <div><strong>Confirm</strong><span>In quote</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h4>Wholesale Supply</h4>
+        <p class="muted">We focus on B2B orders: distributors, fabricators, greenhouse operators, and commercial builds.</p>
+        <div class="kv">
+          <div><strong>Ordering</strong><span>Wholesale volumes</span></div>
+          <div><strong>Docs</strong><span>TDS + commercial docs</span></div>
+          <div><strong>Support</strong><span>Lead time + logistics</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICAL DOCS (one clean block like Forma’s “DOWNLOAD BROCHURE”) -->
+<section class="section section--soft" id="technical">
+  <div class="container">
+    <div class="head">
       <h2>Technical Documentation</h2>
-      <p>Download the Technical Data Sheets (TDS). Keep this page simple for engineers and buyers.</p>
+      <p>Two TDS documents: one for Multiwall, one for Solid. Keep it easy for engineers.</p>
     </div>
 
     <div class="docs">
       <div class="doc">
         <h3>Multiwall TDS</h3>
-        <p>Typical values, structure notes, UV information, and handling guidance.</p>
-        <!-- Update href to your actual PDF path -->
+        <p class="muted">Typical values, UV info, handling guidance, and structure notes.</p>
         <a class="btn btn--primary" href="assets/docs/multiwall-tds.pdf" download>Download Multiwall TDS</a>
-        <span class="hint">Put PDF here: <code>assets/docs/multiwall-tds.pdf</code></span>
+        <div class="tiny">Place file here: <code>assets/docs/multiwall-tds.pdf</code></div>
       </div>
 
       <div class="doc">
         <h3>Solid TDS</h3>
-        <p>Typical values, UV information (both sides), and thickness notes.</p>
-        <!-- Update href to your actual PDF path -->
+        <p class="muted">Typical values, UV both sides, and thickness-specific notes.</p>
         <a class="btn btn--primary" href="assets/docs/solid-tds.pdf" download>Download Solid TDS</a>
-        <span class="hint">Put PDF here: <code>assets/docs/solid-tds.pdf</code></span>
+        <div class="tiny">Place file here: <code>assets/docs/solid-tds.pdf</code></div>
       </div>
-    </div>
-
-    <div class="doc-callout">
-      <p><strong>Need a spec-confirmation email?</strong> Send your project requirements and we’ll respond with product + UV + color confirmation.</p>
-      <a class="btn btn--ghost-dark" href="#quote">Request Specs</a>
     </div>
   </div>
 </section>
 
-<!-- LOGISTICS -->
-<section class="section section--soft" id="logistics">
+<!-- LOGISTICS (include FCA/DAP/DDP — YES, it helps B2B trust) -->
+<section class="section" id="logistics">
   <div class="container">
-    <div class="section__head">
+    <div class="head">
       <h2>Logistics & Supply to Canada</h2>
-      <p>Clear delivery responsibilities matter for wholesale. These terms are confirmed on the quotation and documents.</p>
+      <p>Clear responsibilities and predictable process. Terms confirmed in the quotation and documents.</p>
     </div>
 
-    <div class="terms">
-      <div class="term">
-        <h3>FCA (Free Carrier)</h3>
-        <p>You arrange main freight and import. We deliver goods to the agreed carrier at origin with export documentation.</p>
+    <div class="cards">
+      <div class="card">
+        <h4>FCA (Free Carrier)</h4>
+        <p class="muted">You arrange main freight and import. We deliver goods to the agreed carrier at origin with export docs.</p>
       </div>
 
-      <div class="term">
-        <h3>DAP (Delivered to Canada)</h3>
-        <p>We arrange freight to the agreed Canadian destination. Buyer handles customs clearance, duties/taxes, and import requirements.</p>
+      <div class="card">
+        <h4>DAP (Delivered to Canada)</h4>
+        <p class="muted">We arrange freight to the agreed destination. Buyer handles customs clearance, duties/taxes, and import.</p>
       </div>
 
-      <div class="term">
-        <h3>DDP (Delivered Duty Paid)</h3>
-        <p>Available for <strong>qualified accounts</strong> and specific order conditions. Included costs and responsibilities are defined in the quote.</p>
+      <div class="card">
+        <h4>DDP (Delivered Duty Paid)</h4>
+        <p class="muted">Available for qualified accounts and specific order conditions. Included costs defined in the quote.</p>
       </div>
     </div>
 
     <div class="steps">
-      <div class="step"><h3>1) Confirm specs</h3><p>Product type, structure, UV configuration, color, and volume.</p></div>
-      <div class="step"><h3>2) Produce & pack</h3><p>Consistent production + protective packaging for shipment.</p></div>
-      <div class="step"><h3>3) Deliver</h3><p>Shipment coordination + professional commercial documentation support.</p></div>
+      <div class="step"><strong>1) Confirm specs</strong><span>Product, thickness/structure, UV, color, volume</span></div>
+      <div class="step"><strong>2) Produce & pack</strong><span>Protective packaging for long-distance shipment</span></div>
+      <div class="step"><strong>3) Deliver</strong><span>Shipment coordination + commercial documentation support</span></div>
     </div>
   </div>
 </section>
 
-<!-- APPLICATIONS (CURATED, SMALL) -->
-<section class="section" id="applications">
+<!-- APPLICATIONS (curated, not messy) -->
+<section class="section section--soft" id="applications">
   <div class="container">
-    <div class="section__head">
+    <div class="head">
       <h2>Typical Applications</h2>
-      <p>Curated examples to show fit. We keep this tight so the site stays premium and readable.</p>
+      <p>Curated examples. This keeps the page premium and easy to scan.</p>
     </div>
 
-    <div class="app-grid">
-      <figure class="app">
-        <img src="assets/images/usecase-6.jpg" alt="Skylight / roof glazing application" loading="lazy" />
-        <figcaption>Skylights & roof glazing</figcaption>
-      </figure>
-      <figure class="app">
-        <img src="assets/images/gallery-carport.jpg" alt="Canopies and covered structures" loading="lazy" />
+    <div class="gallery3">
+      <figure>
+        <img src="assets/images/gallery-carport.jpg" alt="Canopies & covered structures" loading="lazy" />
         <figcaption>Canopies & covered structures</figcaption>
       </figure>
-      <figure class="app">
-        <img src="assets/images/app-noisebarrier.jpg" alt="Commercial barrier and cladding use" loading="lazy" />
-        <figcaption>Commercial barrier & cladding</figcaption>
+      <figure>
+        <img src="assets/images/app-noisebarrier.jpg" alt="Noise barriers & cladding" loading="lazy" />
+        <figcaption>Noise barriers & cladding</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/app-bubble.jpg" alt="Specialty glazing shapes" loading="lazy" />
+        <figcaption>Specialty glazing shapes</figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<!-- FACTORY / PROOF -->
-<section class="section section--soft" id="factory">
+<!-- FACTORY PROOF + VIDEO -->
+<section class="section" id="factory">
   <div class="container">
-    <div class="section__head">
+    <div class="head">
       <h2>Factory Proof</h2>
-      <p>Real production visuals and packaging — the credibility layer for wholesale buyers.</p>
+      <p>Real production visuals and packaging. This is the credibility layer.</p>
     </div>
 
     <div class="media">
@@ -260,100 +338,47 @@
         </video>
       </div>
 
-      <div class="proof-grid">
-        <img src="assets/images/factory-1.jpg" alt="Factory view" loading="lazy" />
-        <img src="assets/images/packaging.jpg" alt="Packaging and handling" loading="lazy" />
+      <div class="proof">
+        <img src="assets/images/factory-1.jpg" alt="Factory" loading="lazy" />
+        <img src="assets/images/packaging.jpg" alt="Packaging" loading="lazy" />
+        <img src="assets/images/factory-2.jpg" alt="Production" loading="lazy" />
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section__head">
-      <h2>FAQ</h2>
-      <p>Short answers. No fluff.</p>
-    </div>
-
-    <div class="faq">
-      <details>
-        <summary>Do you sell retail / single sheets?</summary>
-        <p>We primarily supply B2B volume buyers. If you have a project, contact us and we’ll advise the best route.</p>
-      </details>
-
-      <details>
-        <summary>Do you provide technical documentation?</summary>
-        <p>Yes. Multiwall and solid TDS are available in the Technical Documentation section above.</p>
-      </details>
-
-      <details>
-        <summary>What UV protection do you offer?</summary>
-        <p>Standard: multiwall UV on one side; solid UV on both sides. Enhanced UV can be offered for volume orders (confirmed in the quote/TDS).</p>
-      </details>
-
-      <details>
-        <summary>What delivery terms do you offer?</summary>
-        <p>FCA, DAP (delivered to Canada), and DDP for qualified accounts. Final responsibilities are defined in the quotation and documents.</p>
-      </details>
-
-      <details>
-        <summary>What information do you need for a quote?</summary>
-        <p>Product type, thickness/structure, color, volume, destination in Canada, and preferred delivery term (FCA/DAP/DDP).</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- QUOTE -->
+<!-- QUOTE (simple, no backend) -->
 <section class="section section--dark" id="quote">
   <div class="container quote">
     <div class="quote__head">
-      <h2>Request a Quote</h2>
+      <h2>Request Pricing & Lead Time</h2>
       <p>
-        For fastest response, include: product type, thickness/structure, color, volume, destination in Canada, and delivery term.
+        Include: product type, thickness/structure, color, volume, destination in Canada, and delivery term (FCA/DAP/DDP).
       </p>
-      <p class="small">
-        This form opens a pre-filled email draft (no backend required).
+      <p class="tiny tiny--light">
+        This opens a pre-filled email draft (no backend needed). Replace the email in <code>js/script.js</code>.
       </p>
     </div>
 
     <form class="form" id="quoteForm">
-      <div class="form__row">
-        <label>
-          Name
-          <input type="text" name="name" placeholder="Your name" required />
-        </label>
-        <label>
-          Company
-          <input type="text" name="company" placeholder="Company name" />
-        </label>
+      <div class="row">
+        <label>Name<input name="name" required placeholder="Your name" /></label>
+        <label>Company<input name="company" placeholder="Company name" /></label>
       </div>
-
-      <div class="form__row">
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@company.com" required />
-        </label>
-        <label>
-          Phone (optional)
-          <input type="tel" name="phone" placeholder="+1..." />
-        </label>
+      <div class="row">
+        <label>Email<input type="email" name="email" required placeholder="you@company.com" /></label>
+        <label>Phone<input name="phone" placeholder="+1..." /></label>
       </div>
-
-      <div class="form__row">
-        <label>
-          Product
+      <div class="row">
+        <label>Product
           <select name="product" required>
             <option value="">Select…</option>
-            <option>Multiwall Polycarbonate</option>
-            <option>Solid Polycarbonate</option>
+            <option>Multiwall</option>
+            <option>Solid</option>
             <option>Both</option>
           </select>
         </label>
-
-        <label>
-          Incoterm / Delivery
+        <label>Delivery term
           <select name="incoterm" required>
             <option value="">Select…</option>
             <option>FCA</option>
@@ -363,59 +388,40 @@
         </label>
       </div>
 
-      <div class="form__row">
-        <label>
-          Thickness / Structure / Color
-          <input type="text" name="spec" placeholder="e.g., 10mm X-structure, clear / bronze" />
-        </label>
-        <label>
-          Volume
-          <input type="text" name="volume" placeholder="e.g., 1 container / monthly / pallets" />
-        </label>
+      <div class="row">
+        <label>Thickness / Structure / Color<input name="spec" placeholder="e.g., 10mm X-structure, clear / bronze" /></label>
+        <label>Volume<input name="volume" placeholder="e.g., 1 container / monthly / pallets" /></label>
       </div>
 
-      <label>
-        Destination (Canada)
-        <input type="text" name="destination" placeholder="City, Province" />
-      </label>
-
-      <label>
-        Message
-        <textarea name="message" rows="5" placeholder="Anything else we should know?"></textarea>
-      </label>
+      <label>Destination (Canada)<input name="destination" placeholder="City, Province" /></label>
+      <label>Message<textarea name="message" rows="5" placeholder="Anything else we should know?"></textarea></label>
 
       <div class="form__actions">
         <button class="btn btn--primary" type="submit">Open Email Draft</button>
         <a class="btn btn--ghost" href="#technical">Download TDS</a>
       </div>
-
-      <p class="small">
-        <strong>Important:</strong> In <code>js/script.js</code>, replace the email address with your real sales email.
-      </p>
     </form>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container footer__inner">
-    <div class="footer__brand">
-      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="footer__logo" />
-      <p>Wholesale polycarbonate supply for Canadian professional buyers.</p>
+    <div class="footer__left">
+      <img src="assets/logo.png" alt="Yevro Polycarbonate logo" class="footer__logo" />
+      <div class="tiny tiny--footer">B2B polycarbonate supply for Canadian professional buyers.</div>
     </div>
-
-    <div class="footer__links">
+    <div class="footer__right">
       <a href="#products">Products</a>
       <a href="#technical">Technical Docs</a>
       <a href="#logistics">Logistics</a>
-      <a href="#quote">Request Quote</a>
-      <a href="#top">Back to top ↑</a>
+      <a href="#quote" class="footer__cta">Request Quote</a>
+      <a href="#top">Top ↑</a>
     </div>
   </div>
-
-  <div class="container footer__bottom">
-    <span>© <span id="year"></span> Yevro Polycarbonate</span>
-  </div>
+  <div class="container footer__bottom">© <span id="year"></span> Yevro Polycarbonate</div>
 </footer>
+
+<a class="float-cta" href="#quote" aria-label="Request Quote">Request Quote</a>
 
 <script src="script.js"></script>
 </body>
