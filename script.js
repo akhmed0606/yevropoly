@@ -3,37 +3,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // Mobile nav
-  const toggle = document.querySelector(".nav-toggle");
-  const nav = document.querySelector(".site-nav");
+  // Mobile nav toggle
+  const btn = document.querySelector(".menu-btn");
+  const nav = document.querySelector(".nav");
 
-  if (toggle && nav) {
-    const closeNav = () => {
-      nav.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
+  if (btn && nav) {
+    const close = () => {
+      nav.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
     };
 
-    toggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
+    btn.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close on link click
-    nav.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => closeNav());
-    });
+    // close when clicking a link
+    nav.querySelectorAll("a").forEach((a) => a.addEventListener("click", close));
 
-    // Close when clicking outside
+    // close when clicking outside
     document.addEventListener("click", (e) => {
-      const target = e.target;
-      const clickedInside = nav.contains(target) || toggle.contains(target);
-      if (!clickedInside) closeNav();
+      const t = e.target;
+      if (!nav.contains(t) && !btn.contains(t)) close();
     });
 
-    // Close on escape
+    // close on Escape
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeNav();
+      if (e.key === "Escape") close();
     });
   }
 });
-
