@@ -3,367 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yevro Polycarbonate | European Polycarbonate Supply for Canada</title>
+  <title>Yevro Polycarbonate | B2B Polycarbonate Supply for Canada</title>
   <meta name="description" content="Multiwall and solid polycarbonate sheets supplied to Canada for distributors, fabricators, greenhouses, and commercial projects." />
 
-  <!-- Performance: preload hero image -->
-  <link rel="preload" as="image" href="assets/images/hero4.jpeg" fetchpriority="high">
+  <!-- Preload hero background (change file if you pick a different hero) -->
+  <link rel="preload" as="image" href="assets/images/hero4.jpeg" fetchpriority="high" />
 
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<header class="site-header" id="top">
-  <div class="container header-flex">
+<header class="header" id="top">
+  <div class="container header__inner">
     <a class="brand" href="index.html" aria-label="Yevro Polycarbonate Home">
-      <!-- logo is NOT in assets/images per your note -->
-      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="logo" />
-      <span class="brand-name">Yevro Polycarbonate</span>
+      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="brand__logo" />
+      <span class="brand__name">Yevro Polycarbonate</span>
     </a>
 
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
 
-    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-      <a class="active" href="index.html">Home</a>
-      <a href="products-multiwall.html">Multiwall</a>
-      <a href="products-solid.html">Solid</a>
-      <a href="technical.html">Technical Documentation</a>
-      <a href="logistics.html">Logistics & Supply</a>
-      <a href="about.html">About</a>
-      <a class="nav-cta" href="contact.html">Request Pricing</a>
+    <nav class="nav" id="nav" aria-label="Primary navigation">
+      <a class="nav__link is-active" href="index.html">Home</a>
+      <a class="nav__link" href="products-multiwall.html">Multiwall</a>
+      <a class="nav__link" href="products-solid.html">Solid</a>
+      <a class="nav__link" href="technical.html">Technical Documentation</a>
+      <a class="nav__link" href="logistics.html">Logistics & Supply</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__cta" href="contact.html">Request Quote</a>
     </nav>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO (simple, one image, one message) -->
 <section class="hero" style="background-image:url('assets/images/hero4.jpeg');">
-  <div class="hero-overlay">
-    <div class="container hero-grid">
-
-      <div class="hero-copy">
-        <p class="eyebrow">European supply • Canadian-facing service</p>
-        <h1>Polycarbonate Sheets for Distribution, Fabrication, and Large Projects in Canada</h1>
-        <p class="hero-lead">
-          Multiwall and solid polycarbonate supplied for professional buyers who need consistent specifications,
-          predictable logistics, and container-level volumes.
+  <div class="hero__overlay">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="kicker">Wholesale supply • Canada-focused</p>
+        <h1>Polycarbonate Sheets for Distributors, Fabricators, and Commercial Buyers</h1>
+        <p class="hero__lead">
+          Multiwall and solid polycarbonate supplied into Canada with consistent specifications,
+          co-extruded UV protection, and container-level availability.
         </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="contact.html">Request Pricing & Lead Time</a>
-          <a class="btn btn-ghost" href="technical.html">View Technical Data Sheets</a>
-        </div>
-
-        <!-- trust bar becomes swipe pills on mobile -->
-        <div class="trust-scroll" aria-label="Key capabilities">
-          <div class="trust-pill">
-            <strong>Resin</strong>
-            <span>Made using leading global resin, incl. Bayer Covestro (Makrolon®)</span>
-          </div>
-          <div class="trust-pill">
-            <strong>UV</strong>
-            <span>Co-extruded UV (multiwall: one side • solid: both sides)</span>
-          </div>
-          <div class="trust-pill">
-            <strong>Multiwall</strong>
-            <span>H-structure & X-structure available</span>
-          </div>
-          <div class="trust-pill">
-            <strong>Colors</strong>
-            <span>Clear + multiple tinted options (volume dependent)</span>
-          </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="contact.html">Request Quote</a>
+          <a class="btn btn--ghost" href="technical.html">Download TDS</a>
         </div>
       </div>
-
-      <!-- collage collapses on mobile -->
-      <div class="hero-media" aria-label="Product and production photos">
-        <div class="collage">
-          <figure class="collage-a">
-            <img src="assets/images/IMG-20251218-WA0026.jpg" alt="Factory production floor" loading="eager">
-          </figure>
-          <figure class="collage-b">
-            <img src="assets/images/usecase-6.jpg" alt="Skylight application" loading="lazy">
-          </figure>
-          <figure class="collage-c">
-            <img src="assets/images/packaging.jpg" alt="Packaging and handling" loading="lazy">
-          </figure>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="section section-tight">
+<!-- QUICK FACTS (easy scan) -->
+<section class="section section--tight">
   <div class="container">
-    <p class="lead">
-      Yevro Polycarbonate supplies high-quality polycarbonate sheets to Canadian distributors, greenhouse operators,
-      commercial builders, and fabricators who require stable specifications, UV performance, and dependable supply.
-    </p>
+    <div class="facts">
+      <div class="fact">
+        <strong>Resin</strong>
+        <span>Made using leading global resin, incl. Bayer Covestro (Makrolon®)</span>
+      </div>
+      <div class="fact">
+        <strong>UV protection</strong>
+        <span>Solid: both sides • Multiwall: one side (standard)</span>
+      </div>
+      <div class="fact">
+        <strong>Multiwall structures</strong>
+        <span>H-structure and X-structure available</span>
+      </div>
+      <div class="fact">
+        <strong>Colors</strong>
+        <span>Clear + multiple tinted options (by thickness/volume)</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- BUILT FOR BUYERS (VISUAL CARDS) -->
+<!-- PRODUCTS (simple, clear) -->
 <section class="section">
   <div class="container">
-    <div class="section-head">
-      <h2>Built for Professional Buyers</h2>
+    <div class="section__head">
+      <h2>Products</h2>
+      <p>Two core products. Clear documentation. Simple purchasing process.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product">
+        <img class="product__img" src="assets/images/multiwall.jpg" alt="Multiwall polycarbonate sheets" loading="lazy" />
+        <div class="product__body">
+          <h3>Multiwall Polycarbonate</h3>
+          <ul class="list">
+            <li>H-structure and X-structure options</li>
+            <li>Co-extruded UV protection (one side standard)</li>
+            <li>Multiple thicknesses and colors available</li>
+          </ul>
+          <div class="product__actions">
+            <a class="btn btn--primary" href="products-multiwall.html">View Multiwall</a>
+            <a class="btn btn--link" href="technical.html">Multiwall TDS</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product">
+        <img class="product__img" src="assets/images/solid.jpg" alt="Solid polycarbonate sheets" loading="lazy" />
+        <div class="product__body">
+          <h3>Solid Polycarbonate</h3>
+          <ul class="list">
+            <li>Co-extruded UV protection on both sides</li>
+            <li>High impact resistance for commercial use</li>
+            <li>Clear and tinted options (by thickness/volume)</li>
+          </ul>
+          <div class="product__actions">
+            <a class="btn btn--primary" href="products-solid.html">View Solid</a>
+            <a class="btn btn--link" href="technical.html">Solid TDS</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SUPPLY (not image-heavy; readable) -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section__head">
+      <h2>Who We Supply</h2>
+      <p>We’re set up for B2B volume buyers — not retail or one-off orders.</p>
+    </div>
+
+    <div class="pill-grid">
+      <div class="pill">Distributors & Wholesalers</div>
+      <div class="pill">Mid-sized Fabricators</div>
+      <div class="pill">Greenhouse Operators</div>
+      <div class="pill">Commercial / Industrial Projects</div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGISTICS (simple mention; details on the logistics page) -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Logistics & Supply to Canada</h2>
       <p>
-        This is a supply-first business: clear specs, repeatable product, and realistic lead times for serious buyers.
+        Container-based supply with clear responsibilities and documentation. Delivery terms available:
+        <strong>FCA</strong>, <strong>DAP (delivered to Canada)</strong>, and <strong>DDP for qualified accounts</strong>.
       </p>
-    </div>
-
-    <div class="card-grid">
-      <a class="image-card" href="contact.html" style="background-image:url('assets/images/packaging.jpg');">
-        <div class="card-overlay">
-          <h3>Distributors & Wholesalers</h3>
-          <p>Container-based supply with stable specs for resale markets.</p>
-        </div>
-      </a>
-
-      <a class="image-card" href="contact.html" style="background-image:url('assets/images/Yevro-image4.png');">
-        <div class="card-overlay">
-          <h3>Greenhouses & Agriculture</h3>
-          <p>UV-protected solutions for agricultural structures and greenhouse builds.</p>
-        </div>
-      </a>
-
-      <a class="image-card" href="contact.html" style="background-image:url('assets/images/app-noisebarrier.jpg');">
-        <div class="card-overlay">
-          <h3>Commercial & Industrial</h3>
-          <p>Roofing, wall systems, skylights, and architectural glazing applications.</p>
-        </div>
-      </a>
-
-      <a class="image-card" href="contact.html" style="background-image:url('assets/images/IMG-20251218-WA0016.jpg');">
-        <div class="card-overlay">
-          <h3>Fabricators & Processors</h3>
-          <p>Sheets suitable for cutting, forming, and downstream processing.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head">
-      <h2>Our Products</h2>
-      <p>Multiwall and solid polycarbonate supplied to Canada with documentation and consistent supply expectations.</p>
-    </div>
-
-    <div class="split">
-      <div class="split-media">
-        <img src="assets/images/multiwall.jpg" alt="Multiwall polycarbonate sheet" loading="lazy">
-      </div>
-      <div class="split-copy">
-        <h3>Multiwall Polycarbonate</h3>
-        <ul class="check">
-          <li>H-structure and X-structure options</li>
-          <li>Co-extruded UV protection on one side (standard)</li>
-          <li>Multiple thicknesses and colors available</li>
-          <li>Enhanced UV available on request (volume dependent)</li>
-        </ul>
-        <div class="split-actions">
-          <a class="btn btn-primary" href="products-multiwall.html">Explore Multiwall</a>
-          <a class="btn btn-link" href="technical.html">View Multiwall TDS</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="split split-reverse">
-      <div class="split-copy">
-        <h3>Solid Polycarbonate</h3>
-        <ul class="check">
-          <li>Co-extruded UV protection on both sides</li>
-          <li>Clear and tinted options (volume dependent)</li>
-          <li>Strong impact resistance for commercial use</li>
-          <li>Thickness-specific UV details defined in TDS</li>
-        </ul>
-        <div class="split-actions">
-          <a class="btn btn-primary" href="products-solid.html">Explore Solid</a>
-          <a class="btn btn-link" href="technical.html">View Solid TDS</a>
-        </div>
-      </div>
-      <div class="split-media">
-        <img src="assets/images/solid.jpg" alt="Solid polycarbonate sheet" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MATERIAL + UV + COLORS -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Material, UV Protection, and Color Options</h2>
-      <p>
-        We keep the website simple and put the technical details where they belong — in the TDS.
-        This section answers what buyers ask first.
-      </p>
-    </div>
-
-    <div class="feature-grid">
-      <div class="feature">
-        <h3>Resin Quality</h3>
-        <p>Manufactured using leading global resin, including Bayer Covestro (Makrolon®).</p>
-      </div>
-
-      <div class="feature">
-        <h3>Co-Extruded UV Layer</h3>
-        <p>
-          Solid sheets: UV on both sides. Multiwall sheets: UV on one side (standard).
-          Higher UV levels available upon request for volume orders.
-        </p>
-      </div>
-
-      <!-- note space in filename: encoded as %20 -->
-      <div class="feature feature-image" style="background-image:url('assets/images/Yevro-image6%20(1).png');">
-        <div class="feature-image-overlay">
-          <h3>Multiple Colors Available</h3>
-          <p>Clear and tinted options available. Color availability depends on thickness and volume.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY EUROPEAN -->
-<section class="band" style="background-image:url('assets/images/Yevro-image6.png');">
-  <div class="band-overlay">
-    <div class="container band-inner">
-      <div>
-        <h2>Why European Polycarbonate</h2>
-        <p>
-          Professional buyers care about consistency. European-manufactured polycarbonate is known for stable production,
-          controlled raw materials, and repeatable performance — especially on large projects.
-        </p>
-      </div>
-      <div class="band-pills">
-        <span class="pill">Repeatable specifications</span>
-        <span class="pill">Consistent UV performance</span>
-        <span class="pill">Predictable material behavior</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- APPLICATIONS -->
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head">
-      <h2>Typical Applications</h2>
-      <p>Curated examples — not a dump. (More can go on a Gallery page later.)</p>
-    </div>
-
-    <div class="gallery" aria-label="Application gallery">
-      <img src="assets/images/usecase-4.jpg" alt="Canopy application" loading="lazy">
-      <img src="assets/images/gallery-carport.jpg" alt="Carport and canopy application" loading="lazy">
-      <img src="assets/images/usecase-6.jpg" alt="Skylight application" loading="lazy">
-      <img src="assets/images/app-noisebarrier.jpg" alt="Noise barrier application" loading="lazy">
-      <img src="assets/images/app-bubble.jpg" alt="Bubble dome application" loading="lazy">
-      <img src="assets/images/Yevro-image3.png" alt="Multiwall structure visual" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- LOGISTICS -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>How We Supply Canada</h2>
-      <p>Simple, professional, and predictable — from specifications to delivery.</p>
     </div>
 
     <div class="steps">
       <div class="step">
         <h3>1) Confirm specifications</h3>
-        <p>Product, structure, UV configuration, color, and volume are confirmed before order.</p>
+        <p>Product, structure, UV configuration, color, and volume confirmed before order.</p>
       </div>
       <div class="step">
         <h3>2) Production & packing</h3>
-        <p>Consistent manufacturing and protective packaging suitable for long-distance shipment.</p>
+        <p>Protective packaging and consistent manufacturing for long-distance shipment.</p>
       </div>
       <div class="step">
-        <h3>3) Delivery into Canada</h3>
-        <p>Shipment coordinated with complete commercial documentation support.</p>
+        <h3>3) Delivery</h3>
+        <p>Shipment coordinated with professional commercial documentation support.</p>
       </div>
     </div>
 
     <div class="inline-cta">
-      <a class="btn btn-primary" href="logistics.html">Logistics & Supply Details</a>
-      <a class="btn btn-ghost-dark" href="contact.html">Discuss Volume & Lead Time</a>
+      <a class="btn btn--primary" href="logistics.html">View Logistics Details</a>
+      <a class="btn btn--ghost-dark" href="contact.html">Request Lead Time</a>
     </div>
   </div>
 </section>
 
-<!-- VIDEO + FACTORY PROOF -->
-<section class="section section-soft">
+<!-- APPLICATIONS (only 3 images, curated) -->
+<section class="section section--soft">
   <div class="container">
-    <div class="section-head">
-      <h2>Manufacturing & Production</h2>
-      <p>Real production visuals — not stock photos. This is the proof layer.</p>
+    <div class="section__head">
+      <h2>Typical Applications</h2>
+      <p>Curated examples to show fit — not a giant image dump.</p>
     </div>
 
-    <div class="video-wrap">
-      <video controls playsinline preload="metadata">
-        <source src="assets/video/factory.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="strip" aria-label="Factory image strip">
-      <img src="assets/images/IMG-20251218-WA0010.jpg" alt="Packed sheets" loading="lazy">
-      <img src="assets/images/IMG-20251218-WA0026.jpg" alt="Factory floor" loading="lazy">
-      <img src="assets/images/IMG-20251218-WA0025.jpg" alt="Installed application example" loading="lazy">
-      <img src="assets/images/IMG-20251218-WA0055.jpg" alt="Quality and sheet detail" loading="lazy">
+    <div class="app-grid">
+      <figure class="app">
+        <img src="assets/images/usecase-6.jpg" alt="Skylight / roof glazing application" loading="lazy" />
+        <figcaption>Skylights & roof glazing</figcaption>
+      </figure>
+      <figure class="app">
+        <img src="assets/images/gallery-carport.jpg" alt="Canopies and covered structures" loading="lazy" />
+        <figcaption>Canopies & covered structures</figcaption>
+      </figure>
+      <figure class="app">
+        <img src="assets/images/app-noisebarrier.jpg" alt="Commercial barrier and cladding use" loading="lazy" />
+        <figcaption>Commercial barrier & cladding</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- TECHNICAL -->
-<section class="section section-dark">
-  <div class="container tech-cta">
-    <div>
-      <h2>Technical Documentation</h2>
-      <p>
-        Technical Data Sheets (TDS) are available for multiwall and solid products.
-        UV layer details and thickness-specific information are defined in the documentation.
-      </p>
+<!-- FACTORY (proof) -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2>Manufacturing Proof</h2>
+      <p>Factory video and real packaging/production visuals.</p>
     </div>
-    <div class="tech-actions">
-      <a class="btn btn-ghost" href="technical.html">Open Technical Page</a>
-      <a class="btn btn-primary" href="contact.html">Request Specs by Email</a>
+
+    <div class="media">
+      <div class="video">
+        <video controls playsinline preload="metadata">
+          <source src="assets/video/factory.mp4" type="video/mp4" />
+          Your browser can’t play this video. <a href="assets/video/factory.mp4">Download it</a>.
+        </video>
+      </div>
+
+      <div class="proof-grid">
+        <img src="assets/images/factory-1.jpg" alt="Factory view" loading="lazy" />
+        <img src="assets/images/packaging.jpg" alt="Packaging and handling" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section section--dark">
+  <div class="container cta">
+    <div>
+      <h2>Request Pricing & Lead Time</h2>
+      <p>Send your product type, thickness/structure, color preference, volume, and Canadian destination.</p>
+    </div>
+    <div class="cta__actions">
+      <a class="btn btn--primary" href="contact.html">Request Quote</a>
+      <a class="btn btn--ghost" href="technical.html">Download TDS</a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container footer-top">
-    <div class="footer-brand">
-      <!-- logo is NOT in assets/images per your note -->
-      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="footer-logo" />
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <img src="assets/logo.png" alt="Yevro Polycarbonate" class="footer__logo" />
       <p>European polycarbonate supply for Canadian professional buyers.</p>
     </div>
 
-    <div class="footer-links">
+    <div class="footer__links">
       <a href="products-multiwall.html">Multiwall</a>
       <a href="products-solid.html">Solid</a>
-      <a href="technical.html">Technical</a>
+      <a href="technical.html">Technical Docs</a>
       <a href="logistics.html">Logistics</a>
       <a href="contact.html">Contact</a>
+      <a href="#top">Back to top ↑</a>
     </div>
   </div>
 
-  <div class="container footer-bottom">
-    <span>© <span id="year"></span> Yevro Polycarbonate. All rights reserved.</span>
-    <a class="to-top" href="#top">Back to top ↑</a>
+  <div class="container footer__bottom">
+    <span>© <span id="year"></span> Yevro Polycarbonate</span>
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
