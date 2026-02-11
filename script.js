@@ -1,16 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.querySelector('.mobile-toggle');
     const nav = document.querySelector('.nav-menu');
+    const toggleIcon = document.querySelector('.mobile-toggle i');
     
     // Toggle Mobile Menu
     toggle.addEventListener('click', () => {
         nav.classList.toggle('active');
+        
+        // Switch Icon between Bars and X
+        if (nav.classList.contains('active')) {
+            toggleIcon.classList.remove('fa-bars');
+            toggleIcon.classList.add('fa-times');
+        } else {
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
+        }
     });
 
     // Close menu when clicking a link
     document.querySelectorAll('.nav-menu a').forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
+            toggleIcon.classList.remove('fa-times');
+            toggleIcon.classList.add('fa-bars');
         });
     });
 
