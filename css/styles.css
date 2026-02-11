@@ -4,10 +4,10 @@
 :root {
     --navy: #0F172A;        /* Dark Industrial Blue */
     --navy-light: #334155;  /* Slate Blue */
-    --accent: #0284c7;      /* Bright Blue for Buttons/Links */
-    --text: #1E293B;        /* Main Text (Dark Slate) */
-    --text-light: #64748B;  /* Secondary Text (Grey) */
-    --bg-light: #F1F5F9;    /* Very Light Grey Background */
+    --accent: #0284c7;      /* Bright Blue */
+    --text: #1E293B;        /* Main Text */
+    --text-light: #64748B;  /* Secondary Text */
+    --bg-light: #F1F5F9;    /* Light Grey */
     --bg-white: #FFFFFF;
     --border: #E2E8F0;
     --spacing: 100px;
@@ -21,6 +21,7 @@ body {
     line-height: 1.6;
     background-color: var(--bg-white);
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -49,12 +50,12 @@ ul { list-style: none; }
 .bg-white { background-color: var(--bg-white); }
 .bg-navy { background-color: var(--navy); color: white; }
 .text-white { color: white !important; }
+.border-bottom { border-bottom: 1px solid var(--border); }
 
 .text-center { text-align: center; }
 .mt-4 { margin-top: 2rem; }
 .rounded-img { border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
 .divider { border: 0; border-top: 1px solid var(--border); margin: 60px 0; }
-.divider-small { border: 0; border-top: 2px solid var(--accent); width: 60px; margin: 30px auto; }
 
 /* Buttons */
 .btn-primary {
@@ -74,10 +75,13 @@ ul { list-style: none; }
     background: white;
     border-bottom: 1px solid var(--border);
     position: fixed; top: 0; width: 100%; z-index: 1000;
-    height: 80px; display: flex; align-items: center;
+    height: 90px; /* Increased height */
+    display: flex; align-items: center;
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.logo img { height: 45px; width: auto; }
+
+/* LOGO SIZE INCREASE */
+.logo img { height: 60px; width: auto; }
 
 .nav-menu ul { display: flex; gap: 30px; align-items: center; }
 .nav-menu a { font-size: 0.95rem; font-weight: 500; color: var(--text); }
@@ -91,36 +95,73 @@ ul { list-style: none; }
 }
 .btn-nav:hover { background: var(--navy); color: white !important; }
 
-.mobile-toggle { display: none; background: none; border: none; cursor: pointer; }
-.bar { width: 25px; height: 3px; background: var(--navy); margin: 5px 0; }
+/* Mobile Toggle */
+.mobile-toggle { 
+    display: none; 
+    font-size: 1.8rem; 
+    cursor: pointer; 
+    color: var(--navy); 
+    z-index: 1002;
+}
 
 /* =========================================
-   4. HERO SECTION (VIDEO)
+   4. HERO SECTION (CENTERED)
    ========================================= */
-.hero { position: relative; height: 600px; display: flex; align-items: center; margin-top: 80px; overflow: hidden; }
-.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.hero { 
+    position: relative; 
+    height: 600px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin-top: 90px; 
+    overflow: hidden; 
+}
 
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
 .hero-bg video {
-    position: absolute;
-    top: 50%; left: 50%;
+    position: absolute; top: 50%; left: 50%;
     min-width: 100%; min-height: 100%;
     width: auto; height: auto;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
 }
-
 .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); }
 
-.hero-content { position: relative; z-index: 2; color: white; max-width: 800px; }
+.hero-content { 
+    position: relative; 
+    z-index: 2; 
+    color: white; 
+    max-width: 900px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .hero-content h1 { color: white; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 .hero-content p { color: #E2E8F0; } 
 .hero-lead { font-size: 1.25rem; margin-bottom: 30px; max-width: 700px; }
 
 /* =========================================
-   5. AUDIENCE GRID
+   5. QUALITY BADGE & SECTION
+   ========================================= */
+.quality-badge {
+    display: inline-block;
+    background: #e0f2fe;
+    color: var(--accent);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.lead-text { font-size: 1.2rem; color: var(--text); }
+
+/* =========================================
+   6. GRID / CARDS
    ========================================= */
 .section-title { text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
-.lead-text { font-size: 1.15rem; line-height: 1.8; color: var(--navy); }
 
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
 .card {
@@ -134,7 +175,7 @@ ul { list-style: none; }
 .card p { font-size: 0.9rem; margin-bottom: 0; }
 
 /* =========================================
-   6. PRODUCTS
+   7. PRODUCTS
    ========================================= */
 .product-block { display: flex; gap: 60px; align-items: center; }
 .product-block.reverse { flex-direction: row-reverse; }
@@ -153,7 +194,7 @@ ul { list-style: none; }
 .tech-note i { color: var(--accent); }
 
 /* =========================================
-   7. GALLERY
+   8. GALLERY
    ========================================= */
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 .gallery-item { position: relative; overflow: hidden; border-radius: 8px; }
@@ -166,7 +207,7 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   8. TECHNICAL & LOGISTICS
+   9. TECHNICAL & LOGISTICS
    ========================================= */
 .row { display: flex; gap: 60px; align-items: center; }
 .row.reverse { flex-direction: row-reverse; }
@@ -182,7 +223,6 @@ ul { list-style: none; }
 }
 .btn-download:hover { border-color: var(--accent); color: var(--accent); background: #f0f9ff; }
 
-/* Logistics Terms */
 .terms-list { display: flex; flex-direction: column; gap: 25px; margin-top: 30px; }
 .term-item { border-left: 4px solid var(--navy); padding-left: 20px; }
 .term-item h3 { font-size: 1.1rem; margin-bottom: 5px; }
@@ -195,7 +235,7 @@ ul { list-style: none; }
 .bg-navy p { opacity: 0.9; }
 
 /* =========================================
-   9. CONTACT (NO FORM)
+   10. CONTACT
    ========================================= */
 .contact-card {
     background: white; border-radius: 12px;
@@ -221,32 +261,45 @@ ul { list-style: none; }
 .contact-info-block ul { margin-top: 20px; list-style: disc; padding-left: 20px; color: var(--text-light); }
 .contact-info-block li { margin-bottom: 10px; }
 
-/* =========================================
-   10. FOOTER
-   ========================================= */
+/* Footer */
 footer { background: var(--navy); color: white; padding: 40px 0; text-align: center; }
 footer p { color: #94a3b8; margin-bottom: 10px; }
 .footer-links a { color: white; margin: 0 15px; opacity: 0.8; font-size: 0.9rem; }
 .footer-links a:hover { opacity: 1; text-decoration: underline; }
 
 /* =========================================
-   11. RESPONSIVE
+   11. RESPONSIVE / MOBILE NAV
    ========================================= */
 @media (max-width: 768px) {
     .mobile-toggle { display: block; }
+    
     .nav-menu {
-        position: fixed; top: 80px; left: -100%; width: 100%;
-        background: white; padding: 30px; border-bottom: 1px solid var(--border);
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 90px);
+        background: white;
+        padding: 30px;
+        border-bottom: 1px solid var(--border);
         transition: 0.3s;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
     }
+    
     .nav-menu.active { left: 0; }
-    .nav-menu ul { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .nav-menu ul { flex-direction: column; align-items: flex-start; gap: 25px; width: 100%; }
+    .nav-menu li { width: 100%; }
+    .nav-menu a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #f1f1f1; width: 100%; }
+    .btn-nav { display: inline-block; width: auto; text-align: center; margin-top: 10px; }
     
     .product-block, .product-block.reverse, .row, .row.reverse, .contact-card {
         flex-direction: column;
     }
-    .hero { height: auto; padding: 100px 0; }
-    .hero h1 { font-size: 2.2rem; }
+    .hero { height: auto; padding: 100px 0; margin-top: 90px; }
+    .hero h1 { font-size: 2rem; }
     .col-img, .product-img { width: 100%; }
     .contact-card { padding: 30px; gap: 40px; }
 }
