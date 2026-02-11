@@ -37,39 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-<script>
-  (function(){
-    const form = document.getElementById('quoteForm');
-    if(!form) return;
-
-    const status = form.querySelector('.form-status');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      status.className = 'form-status';
-      status.textContent = 'Sending…';
-
-      try{
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-
-        if(res.ok){
-          form.reset();
-          status.classList.add('success');
-          status.textContent = 'Thanks — we received your request. We’ll reply with pricing and lead time.';
-        }else{
-          status.classList.add('error');
-          status.textContent = 'Something went wrong. Please try again or email us directly.';
-        }
-      }catch(err){
-        status.classList.add('error');
-        status.textContent = 'Network error. Please try again or email us directly.';
-      }
-    });
-  })();
-</script>
-
