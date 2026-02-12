@@ -10,6 +10,11 @@
     --bg-light: #F1F5F9;    /* Light Grey */
     --bg-white: #FFFFFF;
     --border: #E2E8F0;
+    
+    /* New variables for the Quote Form */
+    --line: #E2E8F0;
+    --muted: #94a3b8;
+    
     --spacing: 100px;
 }
 
@@ -46,12 +51,14 @@ ul { list-style: none; }
 .narrow-content { max-width: 800px; margin: 0 auto; }
 .section { padding: var(--spacing) 0; }
 
+/* Backgrounds */
 .bg-light { background-color: var(--bg-light); }
 .bg-white { background-color: var(--bg-white); }
 .bg-navy { background-color: var(--navy); color: white; }
 .text-white { color: white !important; }
 .border-bottom { border-bottom: 1px solid var(--border); }
 
+/* Alignment & Spacing */
 .text-center { text-align: center; }
 .mt-4 { margin-top: 2rem; }
 .rounded-img { border-radius: 8px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
@@ -65,6 +72,10 @@ ul { list-style: none; }
     padding: 14px 30px;
     border-radius: 6px;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
 }
 .btn-primary:hover { background: var(--navy); }
 
@@ -75,13 +86,12 @@ ul { list-style: none; }
     background: white;
     border-bottom: 1px solid var(--border);
     position: fixed; top: 0; width: 100%; z-index: 1000;
-    height: 90px; /* Increased height */
+    height: 90px;
     display: flex; align-items: center;
 }
 .nav-container { display: flex; justify-content: space-between; align-items: center; width: 100%; }
 
-/* LOGO SIZE INCREASE */
-.logo img { height: 60px; width: auto; }
+.logo img { height: 150px; width: auto; }
 
 .nav-menu ul { display: flex; gap: 30px; align-items: center; }
 .nav-menu a { font-size: 0.95rem; font-weight: 500; color: var(--text); }
@@ -105,19 +115,16 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   4. HERO SECTION (CENTERED)
+   4. HERO SECTION (VIDEO)
    ========================================= */
 .hero { 
     position: relative; 
     height: 600px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     text-align: center;
     margin-top: 90px; 
     overflow: hidden; 
 }
-
 .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
 .hero-bg video {
     position: absolute; top: 50%; left: 50%;
@@ -129,38 +136,22 @@ ul { list-style: none; }
 .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.6); }
 
 .hero-content { 
-    position: relative; 
-    z-index: 2; 
-    color: white; 
-    max-width: 900px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative; z-index: 2; color: white; max-width: 900px; 
+    display: flex; flex-direction: column; align-items: center;
 }
 .hero-content h1 { color: white; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 .hero-content p { color: #E2E8F0; } 
 .hero-lead { font-size: 1.25rem; margin-bottom: 30px; max-width: 700px; }
 
 /* =========================================
-   5. QUALITY BADGE & SECTION
+   5. SECTIONS: QUALITY & AUDIENCE
    ========================================= */
 .quality-badge {
-    display: inline-block;
-    background: #e0f2fe;
-    color: var(--accent);
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: inline-block; background: #e0f2fe; color: var(--accent);
+    padding: 8px 16px; border-radius: 50px; font-weight: 700;
+    font-size: 0.9rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;
 }
 .lead-text { font-size: 1.2rem; color: var(--text); }
-
-/* =========================================
-   6. GRID / CARDS
-   ========================================= */
 .section-title { text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
 
 .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
@@ -175,13 +166,12 @@ ul { list-style: none; }
 .card p { font-size: 0.9rem; margin-bottom: 0; }
 
 /* =========================================
-   7. PRODUCTS
+   6. PRODUCTS & GALLERY
    ========================================= */
 .product-block { display: flex; gap: 60px; align-items: center; }
 .product-block.reverse { flex-direction: row-reverse; }
 .product-img { flex: 1; }
 .product-img img { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-radius: 8px; width: 100%; height: 350px; object-fit: cover; }
-
 .product-text { flex: 1; }
 .product-desc { font-size: 1.1rem; color: var(--navy); font-weight: 500; }
 .spec-list li { margin-bottom: 10px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
@@ -193,9 +183,6 @@ ul { list-style: none; }
 }
 .tech-note i { color: var(--accent); }
 
-/* =========================================
-   8. GALLERY
-   ========================================= */
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
 .gallery-item { position: relative; overflow: hidden; border-radius: 8px; }
 .gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
@@ -207,7 +194,7 @@ ul { list-style: none; }
 }
 
 /* =========================================
-   9. TECHNICAL & LOGISTICS
+   7. TECHNICAL & LOGISTICS
    ========================================= */
 .row { display: flex; gap: 60px; align-items: center; }
 .row.reverse { flex-direction: row-reverse; }
@@ -235,81 +222,16 @@ ul { list-style: none; }
 .bg-navy p { opacity: 0.9; }
 
 /* =========================================
-   10. CONTACT
+   8. FOOTER
    ========================================= */
-.contact-card {
-    background: white; border-radius: 12px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--border);
-    padding: 50px;
-    display: flex; gap: 60px; align-items: center;
-}
-.contact-details { flex: 1; display: flex; flex-direction: column; gap: 30px; }
-.detail-item { display: flex; gap: 20px; align-items: flex-start; }
-.detail-item i {
-    font-size: 1.5rem; color: var(--accent);
-    background: #e0f2fe; padding: 15px; border-radius: 50%;
-}
-.detail-item h4 { margin-bottom: 5px; font-size: 1.1rem; }
-.detail-item a { font-size: 1.1rem; color: var(--text); font-weight: 500; }
-.detail-item a:hover { color: var(--accent); }
-
-.contact-info-block {
-    flex: 1; background: var(--bg-light); padding: 30px; border-radius: 8px;
-}
-.contact-info-block h4 { border-bottom: 1px solid var(--border); padding-bottom: 10px; }
-.contact-info-block ul { margin-top: 20px; list-style: disc; padding-left: 20px; color: var(--text-light); }
-.contact-info-block li { margin-bottom: 10px; }
-
-/* Footer */
 footer { background: var(--navy); color: white; padding: 40px 0; text-align: center; }
 footer p { color: #94a3b8; margin-bottom: 10px; }
 .footer-links a { color: white; margin: 0 15px; opacity: 0.8; font-size: 0.9rem; }
 .footer-links a:hover { opacity: 1; text-decoration: underline; }
 
 /* =========================================
-   11. RESPONSIVE / MOBILE NAV
+   9. QUOTE FORM LAYOUT (THE NEW PART)
    ========================================= */
-@media (max-width: 768px) {
-    .mobile-toggle { display: block; }
-    
-    .nav-menu {
-        position: fixed;
-        top: 90px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 90px);
-        background: white;
-        padding: 30px;
-        border-bottom: 1px solid var(--border);
-        transition: 0.3s;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-    }
-    
-    .nav-menu.active { left: 0; }
-    .nav-menu ul { flex-direction: column; align-items: flex-start; gap: 25px; width: 100%; }
-    .nav-menu li { width: 100%; }
-    .nav-menu a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #f1f1f1; width: 100%; }
-    .btn-nav { display: inline-block; width: auto; text-align: center; margin-top: 10px; }
-    
-    .product-block, .product-block.reverse, .row, .row.reverse, .contact-card {
-        flex-direction: column;
-    }
-    .hero { height: auto; padding: 100px 0; margin-top: 90px; }
-    .hero h1 { font-size: 2rem; }
-    .col-img, .product-img { width: 100%; }
-    .contact-card { padding: 30px; gap: 40px; }
-}
-
-/* =========================================
-   FORM & QUOTE SECTION STYLES
-   (Paste this at the bottom of your CSS file)
-   ========================================= */
-
-/* Layout for the Quote Section */
 .quote-layout {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -317,7 +239,6 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
   align-items: start;
 }
 
-/* Left Side: Help Box */
 .quote-help {
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -334,14 +255,10 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
 .help-list {
   margin: 0;
   padding-left: 18px;
-  list-style: none; /* Removes default bullets */
+  list-style: none; 
 }
 
-.help-list li {
-  margin: 8px 0;
-  color: var(--text);
-  font-size: 0.95rem;
-}
+.help-list li { margin: 8px 0; color: #2b313b; }
 
 .mini-note {
   margin-top: 14px;
@@ -349,105 +266,112 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
   border: 1px solid var(--line);
   border-radius: 14px;
   background: #f6f7f9;
-  color: var(--text);
+  color: #2b313b;
   font-size: 14px;
 }
 
-/* Right Side: The Form Card */
 .quote-card {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: #fff;
-  padding: 25px; /* Increased padding for better look */
+  padding: 25px;
   box-shadow: 0 10px 26px rgba(15, 18, 23, .06);
 }
 
-/* Labels */
+/* Form Styles */
 .form label {
-  display: block; /* Ensures label takes full width */
-  margin-bottom: 8px;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--navy);
+  display: grid;
+  gap: 6px;
+  font-weight: 800;
+  font-size: 13.5px;
+  margin-bottom: 12px;
 }
 
-/* Input Fields */
-.form input, 
-.form select, 
-.form textarea {
+.form input, .form select, .form textarea {
   width: 100%;
   padding: 12px;
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid var(--line);
   background: #fff;
   color: var(--text);
   outline: none;
   font-family: inherit;
-  font-size: 1rem;
-  margin-bottom: 15px; /* Adds space below inputs */
-  transition: 0.3s;
 }
 
-/* Input Focus State (Blue Glow) */
-.form input:focus, 
-.form select:focus, 
-.form textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15); /* Light blue glow */
+.form input:focus, .form select:focus, .form textarea:focus {
+  border-color: rgba(15, 94, 168, .55);
+  box-shadow: 0 0 0 4px rgba(15, 94, 168, .12);
 }
 
-/* Two Column Rows (Name/Company) */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 12px;
+  margin-bottom: 0;
 }
 
-/* Submit Button Area */
 .form-actions {
-  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
 }
 
-.btn-primary {
-  width: 100%; /* Makes button full width on mobile */
-  text-align: center;
-}
-
-/* Form Note (Small text at bottom) */
 .form-note {
-  margin-top: 15px;
-  font-size: 13px;
+  margin: 10px 0 0 0;
+  font-size: 12.5px;
   color: var(--muted);
-  text-align: center;
 }
 
-/* Status Messages (Success/Error) */
 .form-status {
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 8px;
-  padding: 10px;
+  margin-top: 12px;
+  font-size: 13.5px;
 }
 
 .form-status.success {
   color: #0f6a3a;
   background: #eaf7ef;
   border: 1px solid #bfe7cf;
+  padding: 10px 12px;
+  border-radius: 12px;
 }
 
 .form-status.error {
   color: #8a1f1f;
   background: #fdecec;
   border: 1px solid #f3b9b9;
+  padding: 10px 12px;
+  border-radius: 12px;
 }
 
-/* Hidden Field */
 .honeypot { display: none !important; }
 
-/* Mobile Responsiveness */
+/* =========================================
+   10. RESPONSIVE / MOBILE 
+   ========================================= */
 @media (max-width: 980px) {
   .quote-layout { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; } /* Stacks Name/Company vertically */
+  .form-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    .mobile-toggle { display: block; }
+    
+    .nav-menu {
+        position: fixed; top: 90px; left: -100%; width: 100%;
+        height: calc(100vh - 90px); background: white;
+        padding: 30px; border-bottom: 1px solid var(--border);
+        transition: 0.3s; z-index: 999;
+        display: flex; flex-direction: column; overflow-y: auto;
+    }
+    .nav-menu.active { left: 0; }
+    .nav-menu ul { flex-direction: column; align-items: flex-start; gap: 25px; width: 100%; }
+    .nav-menu li { width: 100%; }
+    .nav-menu a { display: block; font-size: 1.1rem; padding: 10px 0; border-bottom: 1px solid #f1f1f1; width: 100%; }
+    .btn-nav { display: inline-block; width: auto; text-align: center; margin-top: 10px; }
+    
+    .product-block, .product-block.reverse, .row, .row.reverse { flex-direction: column; }
+    .hero { height: auto; padding: 100px 0; margin-top: 90px; }
+    .hero h1 { font-size: 2rem; }
+    .col-img, .product-img { width: 100%; }
 }
