@@ -243,6 +243,54 @@
     </section>
     
      <!-- contact us -->
+    <div class="quote-card">
+    <form id="contact-form" class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        
+        <input type="text" name="_gotcha" class="honeypot" style="display:none">
+        
+        <div class="form-row">
+            <label>Name
+                <input type="text" name="name" placeholder="John Doe" required>
+            </label>
+            <label>Company
+                <input type="text" name="company" placeholder="Business Name" required>
+            </label>
+        </div>
+
+        <label>Email Address
+            <input type="email" name="email" placeholder="john@company.com" required>
+        </label>
+
+        <div class="form-row">
+            <label>Material Type
+                <select name="material">
+                    <option value="Multiwall">Multiwall Polycarbonate</option>
+                    <option value="Solid">Solid Polycarbonate</option>
+                    <option value="Both">Both / Other</option>
+                </select>
+            </label>
+            <label>Est. Volume
+                <select name="volume">
+                    <option value="Container">Full Container Load</option>
+                    <option value="Pallets">Multiple Pallets</option>
+                    <option value="Project">Custom Project</option>
+                </select>
+            </label>
+        </div>
+
+        <label>Project Details
+            <textarea name="message" rows="4" placeholder="Describe your requirements..."></textarea>
+        </label>
+
+        <div class="form-actions">
+            <button type="submit" class="btn-primary">Request Quote</button>
+        </div>
+        
+        <div id="form-status" class="form-status"></div>
+        
+        <p class="form-note">We typically reply with pricing within 24 hours.</p>
+    </form>
+</div>
     
     <section id="contact" class="section bg-white">
         <div class="container contact-container">
