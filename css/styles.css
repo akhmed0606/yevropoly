@@ -303,3 +303,25 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
     .col-img, .product-img { width: 100%; }
     .contact-card { padding: 30px; gap: 40px; }
 }
+
+/* These are the classes the JavaScript above triggers */
+.form-status {
+  margin-top: 12px;
+  font-size: 13.5px;
+}
+
+.form-status.success {
+  color: #0f6a3a;
+  background: #eaf7ef;
+  border: 1px solid #bfe7cf;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+
+.form-status.error {
+  color: #8a1f1f;
+  background: #fdecec;
+  border: 1px solid #f3b9b9;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
