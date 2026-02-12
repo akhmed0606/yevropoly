@@ -37,3 +37,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+/* =========================================
+   FORMSPREE AJAX SUBMISSION
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    if (form) {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Stop page from reloading
+            
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success!
+                    status.innerHTML = "Thanks! We have received your inquiry and will be in touch shortly.";
+                    status.className = "form-status success"; // Applies your Green CSS
+                    form.reset(); // Clear the form
+                } else {
+                    // Error from Formspree
+                    const result = await response.json();
+                    if (Object.hasOwn(result, 'errors')) {
+                        status.innerHTML = result.errors.map(error => error.message).join(", ");
+                    } else {
+                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    }
+                    status.className = "form-status error"; // Applies your Red CSS
+                }
+            } catch (error) {
+                // Network error
+                status.innerHTML = "Oops! There was a network problem.";
+                status.className = "form-status error";
+            }
+        });
+    }
+});
