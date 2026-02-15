@@ -436,3 +436,34 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
         padding: 16px;
     }
 }
+/* =========================================
+   WHY YEVRO SECTION STYLES
+   ========================================= */
+
+/* Text Colors specific to Navy Background */
+.bg-navy .lead-text.text-light-blue {
+    color: #e2e8f0;
+    margin-bottom: 25px;
+}
+
+/* "Our difference is consistency" Title */
+.highlight-title {
+    color: #38bdf8; /* Bright Cyan/Blue */
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+/* The small text under UV Protection */
+.sub-note {
+    display: block;
+    font-size: 0.9em;
+    color: #94a3b8; /* Muted Grey */
+    margin-top: 4px;
+    font-weight: 400;
+}
+
+/* Deep shadow for the image to make it pop */
+.shadow-strong {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
