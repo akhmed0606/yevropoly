@@ -482,75 +482,61 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
 @media (max-width: 768px) {
     .floating-badge { bottom: 20px; right: 20px; }
 }
-/* =========================================
-   WHY (Dribbble layout, your colors)
-   ========================================= */
-
+/* WHY (left boxes + right image) */
 #why .why-head{
-  text-align: center;
+  text-align:center;
   max-width: 760px;
-  margin: 0 auto 46px auto;
+  margin: 0 auto 40px auto;
 }
+#why .why-head h2{ color:#fff; margin-bottom:12px; }
+#why .why-head p{ color: rgba(255,255,255,0.88); margin:0; }
 
-#why .why-head h2{
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-#why .why-head p{
-  color: rgba(255,255,255,0.88);
-  margin-bottom: 0;
-  font-size: 1.05rem;
-}
-
-/* 3-column layout */
-#why .why-grid{
-  display: grid;
-  grid-template-columns: 1fr 420px 1fr;
+#why .why-split{
+  display:grid;
+  grid-template-columns: 1.2fr 0.9fr;
   gap: 34px;
-  align-items: center;
+  align-items: start;
 }
 
-/* Side stacks */
-#why .why-side{
-  display: grid;
-  gap: 18px;
+#why .why-cards{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
+/* Consistent cards */
 #why .why-point{
-  text-align: center;
   padding: 18px 16px;
   border-radius: 14px;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(226,232,240,0.14);
+  text-align: left;
+  min-height: 168px; /* keeps sizes aligned */
 }
 
 #why .why-ico{
-  width: 56px;
-  height: 56px;
-  margin: 0 auto 12px auto;
+  width: 52px; height: 52px;
   border-radius: 14px;
-  display: grid;
-  place-items: center;
+  display:grid; place-items:center;
   background: rgba(2,132,199,0.18);
-  color: #fff;
-  font-size: 1.25rem;
+  color:#fff;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
 }
 
 #why .why-point h3{
-  color: #fff;
+  color:#fff;
   font-size: 1.05rem;
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
 }
-
 #why .why-point p{
   color: rgba(255,255,255,0.86);
   font-size: 0.95rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #why .why-sub{
-  margin-top: 12px;
+  margin-top: 10px;
   padding: 10px 12px;
   border-radius: 12px;
   background: rgba(255,255,255,0.06);
@@ -559,41 +545,37 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
   font-size: 0.9rem;
 }
 
-/* Center image + button */
-#why .why-center{
-  display: grid;
-  justify-items: center;
-  gap: 16px;
+/* CTA spacing */
+#why .why-cta{
+  margin-top: 22px;
+  display:flex;
+}
+#why .why-cta .btn-primary{
+  width: auto;       /* override global width:100% */
+  min-width: 320px;
 }
 
+/* Image block */
 #why .why-img{
-  width: 100%;
   border-radius: 16px;
-  overflow: hidden;
+  overflow:hidden;
   border: 1px solid rgba(226,232,240,0.14);
   box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  position: sticky;
+  top: 140px; /* sits nicely below your fixed header */
 }
-
 #why .why-img img{
-  width: 100%;
-  height: 420px;
+  width:100%;
+  height: 520px;
   object-fit: cover;
-  display: block;
-}
-
-/* Your btn-primary is width:100% globally — make it look like the Dribbble CTA here */
-#why .why-btn{
-  width: auto;
-  min-width: 280px;
+  display:block;
 }
 
 /* Responsive */
 @media (max-width: 980px){
-  #why .why-grid{
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
+  #why .why-split{ grid-template-columns: 1fr; }
+  #why .why-cards{ grid-template-columns: 1fr; }
+  #why .why-img{ position: relative; top:auto; }
   #why .why-img img{ height: 320px; }
-  #why .why-btn{ width: 100%; min-width: 0; }
+  #why .why-cta .btn-primary{ width: 100%; min-width: 0; }
 }
-
