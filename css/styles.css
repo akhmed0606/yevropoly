@@ -636,135 +636,136 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
 }
 
 /* =========================================
-   PROFILES & ACCESSORIES (IMAGES + PDF)
+   PROFILES & ACCESSORIES (Final 3-Column Style)
    ========================================= */
 
-/* Card Styling */
 .profile-card {
     background: white;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 25px;
-    height: 100%; /* Ensures both cards are same height */
+    height: 100%; /* Forces all cards to match height */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .profile-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
 .profile-header {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border-bottom: 1px solid #f1f5f9;
     padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
 }
 
 .profile-header h3 {
     margin: 0;
-    font-size: 1.25rem;
-    color: var(--navy);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F172A; /* Dark Navy */
 }
 
 /* Image Wrapper */
 .profile-img-wrapper {
     background: #f8fafc;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     margin-bottom: 20px;
-    border: 1px solid #e2e8f0;
-    min-height: 200px; /* Keeps layout stable even if image loads slow */
+    height: 180px; /* Fixed height ensures alignment */
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #e2e8f0;
 }
 
 .profile-img-wrapper img {
-    max-height: 180px;
-    width: auto;
+    max-height: 100%;
     max-width: 100%;
     object-fit: contain;
 }
 
-/* PDF Download Button */
+/* Body Content */
+.profile-body {
+    flex-grow: 1; /* Pushes content to fill space */
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-body p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Spacer to push button to bottom */
+.spacer {
+    margin-top: auto; 
+}
+
+/* PDF Button Styling */
 .btn-pdf-download {
-    display: inline-flex;
+    display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     background: white;
     color: #ef4444; /* PDF Red */
     border: 1px solid #e2e8f0;
-    padding: 10px 16px;
+    padding: 12px;
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease;
-    margin-top: 10px;
-    width: 100%; /* Full width on mobile, looks cleaner */
-    justify-content: center;
+    width: 100%;
 }
 
 .btn-pdf-download:hover {
-    background: #fef2f2; /* Light red background on hover */
-    border-color: #fca5a5;
-    color: #dc2626;
+    background: #fef2f2;
+    border-color: #ef4444;
 }
 
-.btn-pdf-download i {
-    font-size: 1.1rem;
-}
-
-/* Icon Squares (Same as before) */
+/* Icons */
 .icon-square {
     width: 40px; height: 40px;
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
     font-weight: 800; font-size: 1.2rem;
 }
-.bg-blue-light { background: #e0f2fe; }
-.text-blue { color: #0284c7; }
-.bg-green-light { background: #dcfce7; }
-.text-green { color: #16a34a; }
+.bg-blue-light { background: #e0f2fe; } .text-blue { color: #0284c7; }
+.bg-green-light { background: #dcfce7; } .text-green { color: #16a34a; }
+.bg-orange-light { background: #ffedd5; } .text-orange { color: #ea580c; }
 
 /* Disclaimer Note */
 .tech-note {
-    background: #fffbeb;
-    color: #92400e;
-    padding: 10px 20px;
-    border-radius: 30px;
+    background: #fff7ed;
+    border: 1px solid #ffedd5;
+    padding: 15px;
+    border-radius: 8px;
     font-size: 0.9rem;
-    border: 1px solid #fcd34d;
+    color: #9a3412;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
-/* =========================================
-   MOBILE OPTIMIZATIONS FOR PROFILES
-   ========================================= */
+.tech-note i { font-size: 1.2rem; }
+
+/* Mobile Optimizations */
 @media (max-width: 768px) {
-    /* 1. Reduce padding inside cards to give content more room */
     .profile-card {
-        padding: 20px; 
+        padding: 20px; /* Slightly tighter padding on phone */
     }
-
-    /* 2. Make the disclaimer note look better when text wraps */
     .tech-note {
-        border-radius: 8px; /* Change from pill shape to rounded box */
-        width: 100%;        /* Full width */
-        text-align: left;   /* Easier to read wrapped text */
-        display: block;     /* Stack the icon and text */
-    }
-    
-    .tech-note i {
-        display: inline-block;
-        margin-bottom: 5px;
-        color: #b45309;
-    }
-
-    /* 3. Make the PDF button easier to tap */
-    .btn-pdf-download {
-        padding: 14px; /* Taller button for thumbs */
-        font-size: 1rem;
+        flex-direction: column;
+        text-align: center;
     }
 }
