@@ -636,119 +636,135 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
 }
 
 /* =========================================
-   PROFILES & ACCESSORIES STYLES
+   PROFILES & ACCESSORIES (IMAGES + PDF)
    ========================================= */
 
-/* Technical Drawing Card (Left Side) */
-.tech-drawing-card {
+/* Card Styling */
+.profile-card {
     background: white;
     border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%; /* Ensures both cards are same height */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.profile-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: var(--navy);
+}
+
+/* Image Wrapper */
+.profile-img-wrapper {
+    background: #f8fafc;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    position: sticky;
-    top: 120px; /* Sticks on scroll for desktop */
-}
-
-.drawing-placeholder {
-    background: #f8fafc;
-    border: 2px dashed #cbd5e1;
-    border-radius: 6px;
-    height: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    min-height: 200px; /* Keeps layout stable even if image loads slow */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #64748b;
-    margin-bottom: 15px;
 }
 
-.drawing-placeholder i {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #94a3b8;
+.profile-img-wrapper img {
+    max-height: 180px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-.drawing-caption {
-    font-size: 0.85rem;
-    color: #64748b;
-    border-top: 1px solid #e2e8f0;
-    padding-top: 15px;
+/* PDF Download Button */
+.btn-pdf-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: #ef4444; /* PDF Red */
+    border: 1px solid #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+    width: 100%; /* Full width on mobile, looks cleaner */
+    justify-content: center;
 }
 
-/* Icon Squares for H and U */
+.btn-pdf-download:hover {
+    background: #fef2f2; /* Light red background on hover */
+    border-color: #fca5a5;
+    color: #dc2626;
+}
+
+.btn-pdf-download i {
+    font-size: 1.1rem;
+}
+
+/* Icon Squares (Same as before) */
 .icon-square {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 1.2rem;
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 1.2rem;
 }
-
 .bg-blue-light { background: #e0f2fe; }
 .text-blue { color: #0284c7; }
-
 .bg-green-light { background: #dcfce7; }
 .text-green { color: #16a34a; }
 
-/* Minimal Tech Table */
-.tech-table {
-    font-size: 0.9rem;
-    color: #334155;
-    border-collapse: separate; 
-    border-spacing: 0;
-    width: 100%;
-}
-
-.tech-table thead th {
-    background: #f1f5f9;
-    font-weight: 600;
-    padding: 10px;
-    border-bottom: 2px solid #cbd5e1;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-}
-
-.tech-table tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #e2e8f0;
-    font-family: 'Courier New', Courier, monospace; /* Monospace for numbers looks precise */
-}
-
-.tech-table tbody tr:last-child td {
-    border-bottom: none;
-}
-
 /* Disclaimer Note */
 .tech-note {
-    background: #fffbeb; /* Light yellow warning bg */
-    border-left: 4px solid #f59e0b;
-    padding: 15px;
-    border-radius: 4px;
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
+    background: #fffbeb;
+    color: #92400e;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    border: 1px solid #fcd34d;
 }
+/* =========================================
+   MOBILE OPTIMIZATIONS FOR PROFILES
+   ========================================= */
+@media (max-width: 768px) {
+    /* 1. Reduce padding inside cards to give content more room */
+    .profile-card {
+        padding: 20px; 
+    }
 
-.tech-note i {
-    color: #f59e0b;
-    margin-top: 3px;
-}
+    /* 2. Make the disclaimer note look better when text wraps */
+    .tech-note {
+        border-radius: 8px; /* Change from pill shape to rounded box */
+        width: 100%;        /* Full width */
+        text-align: left;   /* Easier to read wrapped text */
+        display: block;     /* Stack the icon and text */
+    }
+    
+    .tech-note i {
+        display: inline-block;
+        margin-bottom: 5px;
+        color: #b45309;
+    }
 
-.tech-note p {
-    font-size: 0.85rem;
-    color: #78350f;
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Responsive Table Scroll */
-.table-responsive {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    /* 3. Make the PDF button easier to tap */
+    .btn-pdf-download {
+        padding: 14px; /* Taller button for thumbs */
+        font-size: 1rem;
+    }
 }
