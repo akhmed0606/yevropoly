@@ -758,7 +758,10 @@ footer p { color: #94a3b8; margin-bottom: 10px; }
     gap: 10px;
 }
 .tech-note i { font-size: 1.2rem; }
-
+#accessories .btn-primary {
+    display: table;           /* Tricks browser to allow auto margins */
+    margin: 40px auto 0 auto; /* Top=40px, Left/Right=Auto (Centers it), Bottom=0 */
+}
 /* Mobile Optimizations */
 @media (max-width: 768px) {
     .profile-card {
