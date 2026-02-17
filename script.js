@@ -1,20 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     
     /* =========================================
-       1. MOBILE NAVIGATION & SCROLL
+       1. VARIABLES
        ========================================= */
-    const toggle = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav-menu');
-    const toggleIcon = document.querySelector('.mobile-toggle i');
     const header = document.querySelector('.header');
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    // Get the icon inside the toggle button safely
+    const toggleIcon = mobileToggle ? mobileToggle.querySelector('i') : null;
 
-    // Toggle Mobile Menu
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-            nav.classList.toggle('active');
+    /* =========================================
+       2. MOBILE MENU LOGIC
+       ========================================= */
+    // Toggle Menu on Hamburger Click
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
             
-            // Switch Icon between Bars and X
-            if (nav.classList.contains('active')) {
+            // Switch Icon
+            if (navMenu.classList.contains('active')) {
                 toggleIcon.classList.remove('fa-bars');
                 toggleIcon.classList.add('fa-times');
             } else {
@@ -24,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Close menu when clicking a link
-    document.querySelectorAll('.nav-menu a').forEach(link => {
+    // Close Menu when a Link is clicked
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active');
+            navMenu.classList.remove('active');
             if (toggleIcon) {
                 toggleIcon.classList.remove('fa-times');
                 toggleIcon.classList.add('fa-bars');
@@ -35,18 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Navbar Shadow on Scroll
+    /* =========================================
+       3. HEADER SHADOW ON SCROLL
+       ========================================= */
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)";
         } else {
             header.style.boxShadow = "none";
-            header.style.borderBottom = "1px solid #E2E8F0";
         }
     });
 
     /* =========================================
-       2. FORMSPREE AJAX SUBMISSION
+       4. FORMSPREE AJAX SUBMISSION
        ========================================= */
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
@@ -57,9 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const data = new FormData(event.target);
             
-            // Show loading state (Optional but nice)
-            status.innerHTML = "Sending...";
-            status.className = "form-status"; 
+            // Show loading state
+            if (status) {
+                status.innerHTML = "Sending...";
+                status.className = "form-status"; 
+            }
 
             try {
                 const response = await fetch(event.target.action, {
@@ -72,23 +81,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (response.ok) {
                     // Success!
-                    status.innerHTML = "Thanks! We have received your inquiry and will be in touch shortly.";
-                    status.className = "form-status success"; // Green styling
+                    if (status) {
+                        status.innerHTML = "Thanks! We have received your inquiry and will be in touch shortly.";
+                        status.className = "form-status success"; // Green styling
+                    }
                     form.reset(); // Clear the form
                 } else {
                     // Error from Formspree
                     const result = await response.json();
-                    if (Object.hasOwn(result, 'errors')) {
-                        status.innerHTML = result.errors.map(error => error.message).join(", ");
-                    } else {
-                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    if (status) {
+                        if (result.errors) {
+                            status.innerHTML = result.errors.map(error => error.message).join(", ");
+                        } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form.";
+                        }
+                        status.className = "form-status error"; // Red styling
                     }
-                    status.className = "form-status error"; // Red styling
                 }
             } catch (error) {
                 // Network error
-                status.innerHTML = "Oops! There was a network problem.";
-                status.className = "form-status error";
+                if (status) {
+                    status.innerHTML = "Oops! There was a network problem.";
+                    status.className = "form-status error";
+                }
             }
         });
     }
