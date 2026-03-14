@@ -4,11 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Yevro Polycarbonate Canada</title>
-    <meta name="description" content="The exclusive Canadian commercial channel for tier-one European polycarbonate extrusion. Direct supply for distributors and commercial projects.">
+    <meta name="description" content="Canadian-based support. European supply. Clear documentation. We simplify polycarbonate sourcing for trade buyers.">
     
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        .about-hero { position: relative; padding: 160px 20px 100px 20px; overflow-wrap: break-word; color: white; display: flex; align-items: center; justify-content: center; }
+        .about-hero .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        .about-hero .hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .about-hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.75); }
+        .about-hero-content { position: relative; z-index: 2; max-width: 900px; text-align: center; }
+        
+        .clean-list { list-style: none; padding: 0; margin-bottom: 20px; }
+        .clean-list li { position: relative; padding-left: 25px; margin-bottom: 12px; color: var(--text-light); }
+        .clean-list li::before { content: "\f061"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: var(--accent); font-size: 0.9rem; }
+        
+        .check-list-dark { list-style: none; padding: 0; }
+        .check-list-dark li { margin-bottom: 12px; display: flex; gap: 12px; align-items: flex-start; color: rgba(255,255,255,0.85); }
+        .check-list-dark li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: #38bdf8; margin-top: 4px; }
+
+        @media (max-width: 768px) {
+            .about-hero { padding: 130px 20px 70px 20px; }
+            .about-hero h1 { font-size: 2.2rem !important; line-height: 1.2; }
+            .row.align-center { flex-direction: column; }
+            .col-img { width: 100%; margin-bottom: 30px; }
+            .col-img img { width: 100%; max-width: 100%; height: auto; }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,7 +47,7 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" style="color: var(--accent); font-weight: 700;">About</a></li>
+                    <li><a href="about.html" style="color: var(--accent); font-weight: 700;">About Us</a></li>
                     <li><a href="index.html#products">Products</a></li>
                     <li><a href="index.html#accessories">Systems</a></li>
                     <li><a href="index.html#logistics">Logistics</a></li>
@@ -33,72 +57,190 @@
         </div>
     </header>
 
-    <section class="section bg-navy text-center" style="padding: 160px 20px 80px 20px; color: white;">
-        <div class="container narrow-content">
-            <h1 style="color: white; font-size: 2.2rem; margin-bottom: 20px;">Built to Simplify Polycarbonate Supply in Canada.</h1>
-            <p style="font-size: 1.2rem; color: #cbd5e1;">Yevro Polycarbonate was established to give Canadian trade buyers a more direct and dependable way to source multiwall and solid polycarbonate from Europe — with clear specifications, consistent quality, and delivery aligned to real project needs.</p>
+    <section class="about-hero">
+        <div class="hero-bg">
+            <img src="assets/images/hero4.jpeg" alt="Polycarbonate Wholesale Facility">
+            <div class="overlay"></div>
+        </div>
+        <div class="container about-hero-content">
+            <h1 style="color: white; font-size: 3.2rem; margin-bottom: 20px;">Built to Simplify Polycarbonate Supply in Canada</h1>
+            <p style="font-size: 1.2rem; color: #e2e8f0; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Yevro Polycarbonate was created to give Canadian trade buyers a more direct and dependable way to source multiwall and solid polycarbonate from Europe — with clear specifications, consistent quality, and delivery aligned to real project needs.</p>
+            <div class="quality-badge" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; font-size: 1rem; padding: 12px 24px;">
+                <i class="fas fa-check-circle" style="color: #38bdf8;"></i> Canadian-based support. European supply. Clear documentation.
+            </div>
         </div>
     </section>
 
     <section class="section bg-white border-bottom">
         <div class="container">
             <div class="row align-center">
+                
                 <div class="col-img">
-                    <img src="assets/images/akhmed pic.png" alt="Akhmed - Director of Commercial Sales" class="rounded-img" style="box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); border: 1px solid var(--border);">
+                    <img src="assets/images/akhmed pic.png" alt="Akhmed - Yevro Polycarbonate" class="rounded-img" style="box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); border: 1px solid var(--border);">
                 </div>
                 
                 <div class="col-text">
-                    <div class="quality-badge" style="background: #f1f5f9; color: var(--navy);">
-                        <i class="fas fa-map-marker-alt"></i> Headquarters: Cochrane, Alberta
+                    <div class="quality-badge" style="background: #f1f5f9; color: var(--navy); border: 1px solid var(--border);">
+                        <i class="fas fa-map-marker-alt"></i> Location: Cochrane, Alberta, Canada
                     </div>
-                    <h2>Canadian Accountability.<br>Factory-Direct Scale.</h2>
-                    <p class="lead-text">Our commercial desk is led by <strong>Akhmed, Director of Commercial Sales</strong>. When you partner with Yevro Polycarbonate, you are not dealing with a faceless overseas trading company or a generic broker.</p>
-                    <p>You secure the pricing, scale, and priority of a direct-factory purchase, completely backed by the legal security, responsiveness, and accountability of a local Canadian corporate partner. We manage the time zones, the logistics, and the trade compliance so you can focus on your distribution and projects.</p>
+                    
+                    <h2 style="margin-top: 10px;">Your Canadian Point of Contact</h2>
+                    <p>Yevro Polycarbonate is based in Cochrane, Alberta and serves Canadian buyers looking for a more reliable way to source polycarbonate for fabrication, greenhouse construction, and commercial projects.</p>
+                    <p>Akhmed leads the Canadian commercial side of the business, helping customers evaluate product fit, pricing, lead times, and delivery options based on their actual needs.</p>
+                    <p>That means when you contact Yevro, you’re not dealing with a faceless overseas supplier on your own. You have a direct point of contact in Canada who understands the buying process from this side.</p>
+                    
+                    <hr class="divider" style="margin: 40px 0;">
+                    
+                    <h2>Canadian Accountability. European Supply.</h2>
+                    <p>Our role is simple: connect Canadian buyers with dependable European polycarbonate supply, while making the process easier to understand and easier to manage.</p>
+                    <p>We know many buyers want more than retail purchasing, but do not want the complexity of handling overseas sourcing entirely on their own. That is where Yevro fits in. We help bridge that gap with:</p>
+                    
+                    <ul class="clean-list">
+                        <li>Clearer communication</li>
+                        <li>Better visibility on product specifications</li>
+                        <li>Practical support around delivery and documentation</li>
+                        <li>A Canadian business presence buyers can actually speak to</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <section class="section bg-light border-bottom">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Canadian Distributors Trust Our Supply Chain</h2>
-                <p>We eliminate the risks associated with high-volume plastics procurement.</p>
-            </div>
-            
-            <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                <div class="card">
+            <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <i class="fas fa-bullseye card-icon"></i>
+                    <h3>What We Focus On</h3>
+                    <p>We are not trying to be everything to everyone. Our focus is helping Canadian trade buyers source polycarbonate with more clarity around product, quality, and delivery.</p>
+                    <ul class="clean-list" style="margin-top: auto;">
+                        <li>Multiwall and solid polycarbonate only</li>
+                        <li>Straightforward product positioning</li>
+                        <li>Clear documentation</li>
+                        <li>Delivered supply options for Canadian buyers</li>
+                        <li>Support for project-based and repeat purchasing</li>
+                    </ul>
+                    <p style="font-weight: 600; color: var(--navy); margin-bottom: 0;">We want the buying process to feel simpler, not more complicated.</p>
+                </div>
+
+                <div class="card" style="display: flex; flex-direction: column;">
                     <i class="fas fa-vial card-icon"></i>
-                    <h3>Uncompromising Material Provenance</h3>
-                    <p>Trust starts with the raw material. Every single multiwall and solid sheet we import is extruded from <strong>100% virgin Bayer Covestro Makrolon® resin</strong>. This guarantees the structural integrity and optical clarity your clients demand.</p>
+                    <h3>Material Quality You Can Specify With Confidence</h3>
+                    <p>Our sheets are manufactured using <strong>100% virgin Bayer Covestro Makrolon® resin</strong>. For buyers, that matters because material quality affects how confidently you can quote, fabricate, resell, or install the product.</p>
+                    <p>We supply material that buyers can specify clearly:</p>
+                    <ul class="clean-list" style="margin-top: auto; margin-bottom: 0;">
+                        <li>Multiwall polycarbonate with H-structure and X-structure options</li>
+                        <li>Solid polycarbonate with co-extruded UV protection on both sides</li>
+                        <li>Clear and tinted color options depending on thickness and volume</li>
+                    </ul>
                 </div>
-                
-                <div class="card">
-                    <i class="fas fa-industry card-icon"></i>
-                    <h3>European Certified Manufacturing</h3>
-                    <p>Our European manufacturing partners operate state-of-the-art co-extrusion lines. Our molecularly bonded UV protection outlasts the harsh Canadian climate, backed by comprehensive <strong>10-to-15 Year Written Manufacturer Warranties</strong>.</p>
+
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <i class="fas fa-sun card-icon"></i>
+                    <h3>UV Protection by Design</h3>
+                    <p>We do not treat UV performance as an afterthought. Our polycarbonate is produced with co-extruded UV protection, meaning the protective layer is built into the sheet rather than simply applied as a surface treatment.</p>
+                    <p><strong>Standard configuration:</strong></p>
+                    <ul class="clean-list" style="margin-top: auto;">
+                        <li><strong>Multiwall:</strong> UV on one side</li>
+                        <li><strong>Solid:</strong> UV on both sides</li>
+                    </ul>
+                    <p style="margin-bottom: 0;">Depending on the product and order conditions, enhanced UV options may also be available. For buyers comparing materials, this matters because UV protection affects long-term outdoor performance.</p>
                 </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-white border-bottom">
+        <div class="container">
+            <div class="row reverse align-center">
                 
-                <div class="card">
-                    <i class="fas fa-file-invoice-dollar card-icon" style="color: #059669;"></i>
-                    <h3>The CETA Tariff Advantage (0% Duty)</h3>
-                    <p>Because our products are manufactured in Europe, they enter the Canadian market under the CETA free-trade agreement. Our sheets qualify for <strong>0% import duties</strong>, giving you a massive landed-margin advantage over heavily tariffed Asian imports.</p>
+                <div class="col-img">
+                    <img src="assets/images/packaging.jpg" alt="Polycarbonate Secure Packaging" class="rounded-img" style="box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15); border: 1px solid var(--border);">
+                </div>
+
+                <div class="col-text">
+                    <h2>Supply That Works for Canadian Buyers</h2>
+                    <p>Many Canadian buyers want the product delivered without having to manage every part of international shipping themselves. That is why our supply model is built around practical delivery options and clear commercial documentation.</p>
+                    <p>Depending on the order and destination, we can support different logistics structures, including buyer-managed freight and delivered options. Our goal is to make purchasing more straightforward.</p>
+                    
+                    <div class="tech-note" style="display: block; margin-bottom: 40px;">
+                        <strong style="color: var(--navy); display: block; margin-bottom: 10px;">What buyers can expect:</strong>
+                        <ul class="clean-list" style="margin-bottom: 0;">
+                            <li>Quoting based on product requirements and destination</li>
+                            <li>Clear order confirmation before shipment</li>
+                            <li>Commercial documentation included</li>
+                            <li>Packaging suitable for long-distance transport</li>
+                            <li>Delivery options aligned to the order and location</li>
+                        </ul>
+                    </div>
+
+                    <h2 style="display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-file-invoice-dollar" style="color: #059669;"></i> CETA Duty Advantage
+                    </h2>
+                    <p>Our European-origin polycarbonate sheets qualify for <strong>0% import duty</strong> into Canada under CETA, helping Canadian buyers access European supply without added duty costs.</p>
+                    <p style="margin-bottom: 0;">For businesses comparing landed cost, this is an important advantage — especially when combined with product quality, documentation, and delivered supply options.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section bg-white border-top text-center">
+    <section class="section bg-navy">
+        <div class="container">
+            <div class="row align-center">
+                
+                <div class="col-text">
+                    <h2 style="color: white;">Why Buyers Work With Yevro</h2>
+                    <p style="color: #cbd5e1;">You’re buying for projects, customers, or inventory — so you need consistency, not surprises. That is what we aim to provide. What buyers value with Yevro:</p>
+                    
+                    <ul class="check-list-dark" style="margin-bottom: 40px;">
+                        <li>A verified manufacturing source</li>
+                        <li>100% virgin Bayer Covestro Makrolon® resin</li>
+                        <li>Co-extruded UV protection by design</li>
+                        <li>Multiwall H-structure and X-structure options</li>
+                        <li>Clear and tinted color availability</li>
+                        <li>Supply and delivery structured for Canadian trade buyers</li>
+                    </ul>
+
+                    <h2 style="color: white;">Who We Work With</h2>
+                    <p style="color: #cbd5e1;">Our supply model is best suited to businesses that need project-ready or repeat polycarbonate purchasing in Canada. Typical buyers include:</p>
+                    
+                    <ul class="check-list-dark">
+                        <li>Mid-sized fabricators</li>
+                        <li>Greenhouse builders</li>
+                        <li>Construction and roofing contractors</li>
+                        <li>Commercial project buyers</li>
+                        <li>Regional trade suppliers and resellers</li>
+                    </ul>
+                    <p style="color: white; font-weight: 600; margin-top: 20px;">We are built for professional buyers who need clear specifications, dependable supply, and a straightforward path to ordering.</p>
+                </div>
+
+                <div class="col-img">
+                    <img src="assets/images/Yevro%20Poly3.jpeg" alt="Commercial Polycarbonate Applications" class="rounded-img" style="border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light border-top text-center">
         <div class="container narrow-content">
-            <h2>Ready to Secure Your Supply Chain?</h2>
-            <p class="lead-text" style="margin-bottom: 30px;">Whether you are forecasting your next quarter of distribution or breaking ground on a commercial greenhouse, our team is ready to structure a supply agreement that fits your exact volume and delivery requirements.</p>
-            <a href="index.html#contact" class="btn btn-primary" style="min-width: 250px;">Contact Our Commercial Desk</a>
+            <h2>Let’s Talk About Your Requirements</h2>
+            <p class="lead-text" style="margin-bottom: 30px;">Whether you’re sourcing for fabrication, greenhouse construction, commercial glazing, or a larger project, we can help you evaluate product fit, lead time, and delivery options.</p>
+            <a href="index.html#contact" class="btn btn-primary" style="min-width: 250px;">Request Pricing & Lead Time</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
             <p>&copy; 2026 Yevro Polycarbonate. Cochrane, Alberta. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#logistics">Logistics</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
         </div>
     </footer>
 
