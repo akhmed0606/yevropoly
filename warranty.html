@@ -14,14 +14,14 @@
         /* Hero Section (Mobile Fixed) */
         .warranty-hero { padding: 160px 20px 80px 20px; background-color: var(--navy); color: white; display: flex; align-items: center; justify-content: center; text-align: center; overflow-wrap: break-word; box-sizing: border-box; }
         .warranty-hero-content { max-width: 800px; margin: 0 auto; width: 100%; }
-       .warranty-hero-content h1 { font-size: 2.2rem !important; text-align: center !important; margin: 0 auto !important; width: 100% !important; }
+        .warranty-hero-content h1 { font-size: 2.2rem !important; text-align: center !important; margin: 0 auto !important; width: 100% !important; }
         
         /* Main Layout */
         .intro-text { max-width: 900px; margin: 0 auto; padding: 60px 20px 20px 20px; font-size: 1.1rem; line-height: 1.7; color: #334155; text-align: center; }
         
         /* Warranty Cards (Grid) */
-       .warranty-grid { display: flex; flex-direction: column; align-items: center; gap: 25px; margin: 20px auto; padding: 0; width: 100%; }
-            .warranty-card { width: 100%; padding: 30px 20px; margin: 0 auto; }
+        .warranty-grid { display: flex; flex-direction: column; align-items: center; gap: 25px; margin: 20px auto; padding: 0; width: 100%; }
+        .warranty-card { width: 100%; padding: 30px 20px; margin: 0 auto; background: white; border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); }
         .warranty-badge { display: inline-block; background: #e0f2fe; color: #0284c7; font-weight: 700; padding: 8px 16px; border-radius: 50px; margin-bottom: 20px; font-size: 0.95rem; align-self: flex-start; }
         .warranty-card h2 { font-size: 1.5rem; color: var(--navy); margin-top: 0; margin-bottom: 15px; }
         .warranty-card p { font-size: 1.05rem; color: #334155; margin-bottom: 15px; line-height: 1.6; }
@@ -52,11 +52,13 @@
 
         /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .warranty-hero { padding: 120px 15px 50px 15px; }
-            .warranty-hero-content h1 { font-size: 2.2rem !important; }
-            .warranty-card { padding: 30px 20px; }
+            .warranty-hero { padding: 180px 15px 60px 15px !important; }
+            .warranty-hero-content h1 { font-size: 2.2rem !important; text-align: center !important; }
+            .warranty-grid { display: block !important; padding: 0 20px !important; }
+            .warranty-card { padding: 30px 20px; margin-bottom: 20px !important; width: 100% !important; }
             .important-notes { padding: 20px; margin-left: 15px; margin-right: 15px; }
             .contact-claims { padding: 30px 15px; margin-left: 15px; margin-right: 15px; }
+            .contact-claims a { word-break: break-all !important; }
         }
     </style>
 </head>
