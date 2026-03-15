@@ -24,33 +24,25 @@
         .summary-section { margin-top: 40px; margin-bottom: 50px; }
         .summary-section h2 { font-size: 1.5rem; color: var(--navy); margin-bottom: 20px; text-align: center; }
         .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .summary-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 25px 20px; text-align: center; transition: transform 0.2s; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .summary-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05); }
+        .summary-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 25px 20px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
         .summary-icon { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
         .summary-card p { font-size: 1rem; margin: 0; color: var(--navy); font-weight: 600; line-height: 1.4; }
 
-        /* Visual Process Box (RMA) */
-        .process-box { background: white; border: 1px solid #e2e8f0; border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0; padding: 40px; margin-bottom: 60px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .process-box h3 { margin-top: 0; color: var(--navy); margin-bottom: 20px; font-size: 1.5rem; }
-        .process-box p { font-size: 1.05rem; color: #334155; margin-bottom: 15px; }
-        .process-box ul { font-size: 1.05rem; color: #334155; margin-bottom: 25px; padding-left: 20px; }
-        .process-box ul li { margin-bottom: 8px; }
-        .process-contact { background: #f1f5f9; padding: 15px 20px; border-radius: 6px; font-size: 1.05rem; }
-        .process-contact strong { color: var(--navy); }
-
-        /* FAQ Accordion (Clean UI) */
+        /* Open FAQ Cards (New Design) */
+        .faq-section { margin-top: 50px; }
         .faq-section h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 30px; text-align: center; }
-        .faq-item { background: white; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 15px; overflow: hidden; }
-        .faq-item details { width: 100%; }
-        .faq-item summary { padding: 20px 25px; font-weight: 600; font-size: 1.1rem; color: var(--navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; user-select: none; background: #f8fafc; transition: background 0.2s; }
-        .faq-item summary::-webkit-details-marker { display: none; }
-        .faq-item summary:hover { background: #f1f5f9; }
-        .faq-item summary::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--accent); transition: transform 0.3s ease; }
-        .faq-item details[open] summary { border-bottom: 1px solid var(--border); background: white; }
-        .faq-item details[open] summary::after { transform: rotate(180deg); }
-        .faq-content { padding: 20px 25px; font-size: 1.05rem; line-height: 1.6; color: #334155; }
-        .faq-content ul { padding-left: 20px; margin-top: 10px; margin-bottom: 10px; }
-        .faq-content li { margin-bottom: 8px; }
+        
+        .faq-card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .faq-card h3 { color: var(--navy); font-size: 1.25rem; font-weight: 700; margin-top: 0; margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; }
+        .faq-card p { font-size: 1.05rem; line-height: 1.6; color: #334155; margin-bottom: 10px; }
+        .faq-card p:last-child { margin-bottom: 0; }
+        .faq-card ul { font-size: 1.05rem; color: #334155; margin-bottom: 15px; padding-left: 20px; line-height: 1.6; }
+        .faq-card ul li { margin-bottom: 8px; }
+
+        /* Highlighted RMA Box */
+        .rma-highlight { border-left: 4px solid var(--accent); background: #f8fafc; }
+        .process-contact { background: white; padding: 15px 20px; border-radius: 6px; font-size: 1.05rem; border: 1px solid #e2e8f0; margin-top: 15px; }
+        .process-contact strong { color: var(--navy); }
 
         /* Contact Block */
         .claims-contact { text-align: center; background: var(--navy); color: white; padding: 40px 20px; border-radius: 8px; margin-top: 60px; }
@@ -62,9 +54,8 @@
         @media (max-width: 768px) {
             .legal-hero { padding: 120px 15px 50px 15px; }
             .legal-hero-content h1 { font-size: 2rem !important; }
-            .process-box { padding: 25px 20px; }
-            .faq-item summary { font-size: 1rem; padding: 15px 20px; }
-            .faq-content { padding: 15px 20px; }
+            .faq-card { padding: 20px; }
+            .faq-card h3 { font-size: 1.15rem; }
         }
     </style>
 </head>
@@ -127,130 +118,94 @@
                 </div>
             </div>
 
-            <div class="process-box">
-                <h3>How do I open an RMA?</h3>
-                <p>Email or call us with:</p>
-                <ul>
-                    <li>Quote/invoice number</li>
-                    <li>Delivery date</li>
-                    <li>Product details (type, thickness, quantity)</li>
-                    <li>Photos of packaging + affected product</li>
-                    <li>Pallet/crate labels (if applicable)</li>
-                </ul>
-                <div class="process-contact">
-                    <strong>Email:</strong> <a href="mailto:akhmed@yevropolycarbonate.ca" style="color: var(--accent);">akhmed@yevropolycarbonate.ca</a><br>
-                    <strong>Phone:</strong> <a href="tel:+14038797209" style="color: var(--navy);">(403) 879-7209</a>
-                </div>
-            </div>
-
             <div class="faq-section">
                 <h2>FAQ</h2>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Do you accept returns if I change my mind?</summary>
-                        <div class="faq-content">
-                            <p>In general, no. Our orders are placed for professional use and are often allocated/packed specifically for your shipment. We do not accept returns due to project changes, ordering the wrong item, or no longer needing the product.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>Do you accept returns if I change my mind?</h3>
+                    <p>In general, no. Our orders are placed for professional use and are often allocated/packed specifically for your shipment. We do not accept returns due to project changes, ordering the wrong item, or no longer needing the product.</p>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What should I do when my shipment arrives?</summary>
-                        <div class="faq-content">
-                            <p>Please inspect immediately (before storing or moving product around if possible). If there’s visible damage or shortage, note it on the carrier paperwork (when applicable) before signing and contact us right away.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What should I do when my shipment arrives?</h3>
+                    <p>Please inspect immediately (before storing or moving product around if possible). If there’s visible damage or shortage, note it on the carrier paperwork (when applicable) before signing and contact us right away.</p>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What’s your deadline to report damage or shortages?</summary>
-                        <div class="faq-content">
-                            <ul>
-                                <li>Visible damage / shortage: report within 48 hours of delivery</li>
-                                <li>Concealed damage: report within 5 calendar days of delivery and keep all packaging</li>
-                            </ul>
-                            <p>Noting visible damage at delivery is important — if it’s not noted, carrier claim eligibility may be affected.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What’s your deadline to report damage or shortages?</h3>
+                    <ul>
+                        <li>Visible damage / shortage: report within 48 hours of delivery</li>
+                        <li>Concealed damage: report within 5 calendar days of delivery and keep all packaging</li>
+                    </ul>
+                    <p>Noting visible damage at delivery is important — if it’s not noted, carrier claim eligibility may be affected.</p>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What if I received the wrong product?</summary>
-                        <div class="faq-content">
-                            <p>Report it within 7 calendar days of delivery. We’ll confirm the discrepancy and determine the remedy.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What if I received the wrong product?</h3>
+                    <p>Report it within 7 calendar days of delivery. We’ll confirm the discrepancy and determine the remedy.</p>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What if I think there’s a manufacturing defect?</summary>
-                        <div class="faq-content">
-                            <p>Report it within 7 calendar days of delivery, or within 7 days of discovery for issues that couldn’t reasonably be detected at delivery. We may request photos/videos, batch/label information, and/or a sample for evaluation.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What if I think there’s a manufacturing defect?</h3>
+                    <p>Report it within 7 calendar days of delivery, or within 7 days of discovery for issues that couldn’t reasonably be detected at delivery. We may request photos/videos, batch/label information, and/or a sample for evaluation.</p>
+                </div>
+
+                <div class="faq-card rma-highlight">
+                    <h3>How do I open an RMA?</h3>
+                    <p>Email or call us with:</p>
+                    <ul>
+                        <li>Quote/invoice number</li>
+                        <li>Delivery date</li>
+                        <li>Product details (type, thickness, quantity)</li>
+                        <li>Photos of packaging + affected product</li>
+                        <li>Pallet/crate labels (if applicable)</li>
+                    </ul>
+                    <div class="process-contact">
+                        <strong>Email:</strong> <a href="mailto:akhmed@yevropolycarbonate.ca" style="color: var(--accent);">akhmed@yevropolycarbonate.ca</a><br>
+                        <strong>Phone:</strong> <a href="tel:+14038797209" style="color: var(--navy);">(403) 879-7209</a>
+                    </div>
                 </div>
                 
-                <div class="faq-item">
-                    <details>
-                        <summary>How are issues usually resolved?</summary>
-                        <div class="faq-content">
-                            <p>Depending on the situation, condition of goods, and the agreed shipping term, resolution may include (at our discretion):</p>
-                            <ul>
-                                <li>Replacement product (immediate or scheduled)</li>
-                                <li>Store credit / partial credit</li>
-                                <li>Refund (where applicable)</li>
-                            </ul>
-                            <p>Because international returns are typically impractical, issues are usually resolved without requiring a return to origin, unless we specifically request it in writing.</p>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>How are issues usually resolved?</h3>
+                    <p>Depending on the situation, condition of goods, and the agreed shipping term, resolution may include (at our discretion):</p>
+                    <ul>
+                        <li>Replacement product (immediate or scheduled)</li>
+                        <li>Store credit / partial credit</li>
+                        <li>Refund (where applicable)</li>
+                    </ul>
+                    <p>Because international returns are typically impractical, issues are usually resolved without requiring a return to origin, unless we specifically request it in writing.</p>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What situations are not eligible for claims/returns?</summary>
-                        <div class="faq-content">
-                            <p>We can’t accept claims for:</p>
-                            <ul>
-                                <li>Product that has been installed, used, cut, drilled, machined, or modified</li>
-                                <li>Product with protective film removed (where applicable), scratches, or handling damage</li>
-                                <li>Issues caused by improper storage, site handling after delivery, or incorrect installation</li>
-                                <li>Normal variations within manufacturer tolerances/specs</li>
-                            </ul>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What situations are not eligible for claims/returns?</h3>
+                    <p>We can’t accept claims for:</p>
+                    <ul>
+                        <li>Product that has been installed, used, cut, drilled, machined, or modified</li>
+                        <li>Product with protective film removed (where applicable), scratches, or handling damage</li>
+                        <li>Issues caused by improper storage, site handling after delivery, or incorrect installation</li>
+                        <li>Normal variations within manufacturer tolerances/specs</li>
+                    </ul>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>Do you ever approve returns?</summary>
-                        <div class="faq-content">
-                            <p>Rarely. If a return is exceptionally approved in writing:</p>
-                            <ul>
-                                <li>An RMA is required</li>
-                                <li>Goods must be unused and in original packaging suitable for resale</li>
-                                <li>A restocking fee may apply (up to 30%)</li>
-                                <li>Freight/insurance and any customs/brokerage costs are typically the buyer’s responsibility unless the issue is our error</li>
-                            </ul>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>Do you ever approve returns?</h3>
+                    <p>Rarely. If a return is exceptionally approved in writing:</p>
+                    <ul>
+                        <li>An RMA is required</li>
+                        <li>Goods must be unused and in original packaging suitable for resale</li>
+                        <li>A restocking fee may apply (up to 30%)</li>
+                        <li>Freight/insurance and any customs/brokerage costs are typically the buyer’s responsibility unless the issue is our error</li>
+                    </ul>
                 </div>
 
-                <div class="faq-item">
-                    <details>
-                        <summary>What about warranty coverage?</summary>
-                        <div class="faq-content">
-                            <p>Where applicable, coverage is provided under the manufacturer’s written warranty and its terms/conditions. Your site references:</p>
-                            <ul>
-                                <li>Multiwall sheets: 10-year manufacturer warranty (UV performance)</li>
-                                <li>Solid sheets: 15-year manufacturer warranty (UV performance)</li>
-                            </ul>
-                        </div>
-                    </details>
+                <div class="faq-card">
+                    <h3>What about warranty coverage?</h3>
+                    <p>Where applicable, coverage is provided under the manufacturer’s written warranty and its terms/conditions. Your site references:</p>
+                    <ul>
+                        <li>Multiwall sheets: 10-year manufacturer warranty (UV performance)</li>
+                        <li>Solid sheets: 15-year manufacturer warranty (UV performance)</li>
+                    </ul>
                 </div>
 
             </div>
