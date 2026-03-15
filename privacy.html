@@ -11,18 +11,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        .legal-hero { padding: 120px 20px 60px 20px; background-color: var(--navy); color: white; text-align: center; }
-        .legal-content { max-width: 800px; margin: 0 auto; padding: 60px 20px; font-size: 1.05rem; line-height: 1.7; color: #334155; }
-        .legal-content h2 { font-size: 1.5rem; color: var(--navy); margin-top: 40px; margin-bottom: 15px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-        .legal-content h3 { font-size: 1.2rem; color: var(--navy); margin-top: 25px; margin-bottom: 10px; }
+        /* Hero Section (Mobile Fixed) */
+        .legal-hero { padding: 160px 20px 80px 20px; background-color: var(--navy); color: white; display: flex; align-items: center; justify-content: center; text-align: center; overflow-wrap: break-word; box-sizing: border-box; }
+        .legal-hero-content { max-width: 800px; margin: 0 auto; width: 100%; }
+        .legal-hero-content h1 { color: white; margin-bottom: 10px; margin-top: 0; line-height: 1.2; font-size: 2.5rem; }
+        
+        /* Main Layout */
+        .legal-wrapper { max-width: 900px; margin: 0 auto; padding: 60px 20px; color: #334155; font-size: 1.05rem; line-height: 1.7; }
+        .legal-wrapper p { margin-bottom: 15px; }
+        .legal-wrapper h2 { font-size: 1.5rem; color: var(--navy); margin-top: 50px; margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; }
+        .legal-wrapper h3 { font-size: 1.2rem; color: var(--navy); margin-top: 30px; margin-bottom: 15px; }
+        
+        /* Lists */
         .legal-list { padding-left: 20px; margin-bottom: 20px; }
         .legal-list li { margin-bottom: 8px; }
-        .contact-box { background-color: #f8fafc; border: 1px solid var(--border); padding: 25px 30px; border-radius: 8px; margin-top: 30px; }
+
+        /* Contact Highlight Box */
+        .contact-box { background-color: #f8fafc; border-left: 4px solid var(--accent); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 30px; border-radius: 0 8px 8px 0; margin-top: 50px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .contact-box h2 { border-bottom: none; margin-top: 0; padding-bottom: 0; margin-bottom: 15px; }
         
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .legal-hero { padding: 100px 20px 40px 20px; }
-            .legal-hero h1 { font-size: 2.2rem !important; }
-            .contact-box { padding: 20px; }
+            .legal-hero { padding: 120px 15px 50px 15px; }
+            .legal-hero-content h1 { font-size: 2rem !important; }
+            .legal-wrapper { padding: 40px 15px; }
+            .contact-box { padding: 25px 20px; }
         }
     </style>
 </head>
@@ -30,7 +43,7 @@
 
     <header class="header">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
+            <a href="/" class="logo">
                 <img src="assets/logo.png" alt="Yevro Polycarbonate">
             </a>
             <div class="mobile-toggle">
@@ -51,16 +64,16 @@
     </header>
 
     <section class="legal-hero">
-        <div class="container narrow-content">
-            <h1 style="color: white; margin-bottom: 10px;">Privacy Policy</h1>
-            <p style="color: #cbd5e1; font-size: 1.1rem;">Last updated: March 14, 2026</p>
+        <div class="legal-hero-content">
+            <h1>Privacy Policy</h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem; margin: 0 auto;">Last updated: March 14, 2026</p>
         </div>
     </section>
 
-    <section class="section bg-white border-bottom">
-        <div class="container legal-content">
+    <section class="section bg-white border-bottom" style="padding-top: 0;">
+        <div class="legal-wrapper">
             
-            <p>Yevro Polycarbonate (“Yevro”, “we”, “us”, “our”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you visit <strong>yevropolycarbonate.ca</strong> (the “Site”) or contact us for pricing, lead times, or product information.</p>
+            <p>Yevro Polycarbonate (“Yevro”, “we”, “us”, “our”) respects your privacy. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you visit yevropolycarbonate.ca (the “Site”) or contact us for pricing, lead times, or product information.</p>
             
             <p><strong>This Site is intended primarily for business and professional buyers.</strong></p>
 
@@ -99,16 +112,17 @@
             <h2>4) How we use your information</h2>
             <p>We use personal information to:</p>
             <ul class="legal-list">
-                <li>Respond to quote requests and inquiries</li>
-                <li>Provide pricing, lead times, product documentation, and logistics options</li>
-                <li>Communicate with you about your request and follow up as needed</li>
-                <li>Improve and maintain the Site</li>
-                <li>Detect and prevent fraud, abuse, or security issues</li>
-                <li>Comply with legal and regulatory requirements</li>
+                <li>respond to quote requests and inquiries,</li>
+                <li>provide pricing, lead times, product documentation, and logistics options,</li>
+                <li>communicate with you about your request and follow up as needed,</li>
+                <li>improve and maintain the Site,</li>
+                <li>detect and prevent fraud, abuse, or security issues,</li>
+                <li>comply with legal and regulatory requirements.</li>
             </ul>
 
             <h2>5) When we share personal information</h2>
-            <p>We do not sell your personal information. We may share personal information in limited circumstances, such as:</p>
+            <p>We do not sell your personal information.</p>
+            <p>We may share personal information in limited circumstances, such as:</p>
             <ul class="legal-list">
                 <li><strong>Service providers</strong> that help us run the Site and communications (for example, Formspree for form handling, web hosting, and email services). These providers are permitted to use personal information only to provide services to us.</li>
                 <li><strong>Logistics coordination</strong> when needed to quote, ship, or coordinate delivery.</li>
@@ -121,9 +135,9 @@
             <h2>7) How long we keep information</h2>
             <p>We retain personal information only as long as necessary for:</p>
             <ul class="legal-list">
-                <li>Responding to your request</li>
-                <li>Maintaining business records (quotes and communications)</li>
-                <li>Legal, tax, or compliance requirements</li>
+                <li>responding to your request,</li>
+                <li>maintaining business records (quotes and communications),</li>
+                <li>legal, tax, or compliance requirements.</li>
             </ul>
 
             <h2>8) Security</h2>
@@ -132,10 +146,10 @@
             <h2>9) Your choices and access</h2>
             <p>Depending on applicable law, you may have the right to:</p>
             <ul class="legal-list">
-                <li>Request access to your personal information</li>
-                <li>Request corrections</li>
-                <li>Withdraw consent (where consent is the legal basis)</li>
-                <li>Ask questions or make a privacy complaint</li>
+                <li>request access to your personal information,</li>
+                <li>request corrections,</li>
+                <li>withdraw consent (where consent is the legal basis),</li>
+                <li>ask questions or make a privacy complaint.</li>
             </ul>
             <p>To make a request, contact us using the details below.</p>
 
@@ -149,7 +163,7 @@
             <p>We may update this Privacy Policy from time to time. The “Last updated” date at the top indicates when changes were made. Continued use of the Site after updates means you accept the revised policy.</p>
 
             <div class="contact-box">
-                <h2 style="margin-top: 0; border-bottom: none; padding-bottom: 0;">13) Contact us</h2>
+                <h2>13) Contact us</h2>
                 <p style="margin-bottom: 10px;">If you have questions or requests regarding privacy:</p>
                 <p style="margin-bottom: 5px;"><strong>Yevro Polycarbonate</strong><br>Cochrane, Alberta, Canada</p>
                 <p style="margin-bottom: 5px;"><strong>Email:</strong> <a href="mailto:akhmed@yevropolycarbonate.ca" style="color: var(--accent); font-weight: 600;">akhmed@yevropolycarbonate.ca</a></p>
