@@ -20,15 +20,15 @@
         .legal-wrapper { max-width: 900px; margin: 0 auto; padding: 60px 20px; color: #334155; }
         .intro-text { font-size: 1.05rem; line-height: 1.7; margin-bottom: 15px; }
 
-        /* Quick Summary Grid */
-        .summary-section { margin-top: 40px; margin-bottom: 50px; }
-        .summary-section h2 { font-size: 1.5rem; color: var(--navy); margin-bottom: 20px; text-align: center; }
-        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .summary-card { background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; padding: 25px 20px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-        .summary-icon { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
-        .summary-card p { font-size: 1rem; margin: 0; color: var(--navy); font-weight: 600; line-height: 1.4; }
+        /* Clean Quick Summary Box (No Cards) */
+        .quick-summary-box { background-color: #f8fafc; border-left: 4px solid var(--accent); padding: 30px; border-radius: 0 8px 8px 0; margin: 40px 0 50px 0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); }
+        .quick-summary-box h2 { font-size: 1.5rem; color: var(--navy); margin-top: 0; margin-bottom: 20px; }
+        .quick-summary-list { list-style: none; padding: 0; margin: 0; }
+        .quick-summary-list li { position: relative; padding-left: 28px; margin-bottom: 12px; font-size: 1.05rem; color: var(--navy); font-weight: 500; }
+        .quick-summary-list li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; top: 2px; color: var(--accent); font-size: 1.1rem; }
+        .quick-summary-list li:last-child { margin-bottom: 0; }
 
-        /* Open FAQ Cards (New Design) */
+        /* Open FAQ Cards */
         .faq-section { margin-top: 50px; }
         .faq-section h2 { font-size: 1.8rem; color: var(--navy); margin-bottom: 30px; text-align: center; }
         
@@ -54,6 +54,7 @@
         @media (max-width: 768px) {
             .legal-hero { padding: 120px 15px 50px 15px; }
             .legal-hero-content h1 { font-size: 2rem !important; }
+            .quick-summary-box { padding: 25px 20px; }
             .faq-card { padding: 20px; }
             .faq-card h3 { font-size: 1.15rem; }
         }
@@ -96,26 +97,14 @@
             <p class="intro-text">Yevro Polycarbonate supplies European-made polycarbonate sheets and accessories for professional and wholesale buyers in Canada, including Full Container Loads (FCL). Delivery responsibilities are confirmed in your quotation and commercial documents (including FCA / DAP / DDP where applicable).</p>
             <p class="intro-text">Because our products ship in bulk and international freight is complex, we handle order issues through an RMA (Return Merchandise Authorization) process rather than retail-style returns. Nothing in this policy limits rights or remedies that cannot be excluded under applicable law.</p>
 
-            <div class="summary-section">
+            <div class="quick-summary-box">
                 <h2>Quick Summary</h2>
-                <div class="summary-grid">
-                    <div class="summary-card">
-                        <i class="fas fa-ban summary-icon" style="color: #ef4444;"></i>
-                        <p>No change-of-mind returns</p>
-                    </div>
-                    <div class="summary-card">
-                        <i class="fas fa-stopwatch summary-icon"></i>
-                        <p>Inspect on delivery and report issues fast</p>
-                    </div>
-                    <div class="summary-card">
-                        <i class="fas fa-clipboard-list summary-icon"></i>
-                        <p>RMA required for all claims</p>
-                    </div>
-                    <div class="summary-card">
-                        <i class="fas fa-handshake summary-icon" style="color: #10b981;"></i>
-                        <p>Resolutions are typically replacement or credit (physical returns are rare)</p>
-                    </div>
-                </div>
+                <ul class="quick-summary-list">
+                    <li>No change-of-mind returns</li>
+                    <li>Inspect on delivery and report issues fast</li>
+                    <li>RMA required for all claims</li>
+                    <li>Resolutions are typically replacement or credit (physical returns are rare)</li>
+                </ul>
             </div>
 
             <div class="faq-section">
@@ -211,7 +200,7 @@
             </div>
 
             <div class="claims-contact">
-                <h2>Contact Yevro Polycarbonate</h2>
+                <h2>Contact</h2>
                 <p>For RMAs and claims:</p>
                 <a href="mailto:akhmed@yevropolycarbonate.ca" class="contact-link"><i class="fas fa-envelope"></i> akhmed@yevropolycarbonate.ca</a>
                 <a href="tel:+14038797209" class="contact-link"><i class="fas fa-phone"></i> (403) 879-7209</a>
